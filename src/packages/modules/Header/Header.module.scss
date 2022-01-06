@@ -2,15 +2,35 @@
   position: fixed;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+
+  @include scale((
+    height: [70px, 100px, 100px],
+  ));
 
   @include container();
 
-  @include scale(
-    (
-      top: 40px,
-    )
-  );
+  &_logo {
+    @include scale((
+      margin-right: [70px, 75px, 75px],
+    ));
+  }
+
+  &_aside {
+    display: flex;
+    align-items: center;
+
+    margin-left: auto;
+
+    @include scale((
+      margin-right [70px, 75px, 140px],
+    ));
+
+    &_item {
+      display: flex;
+      align-items: center;
+      margin-right: 55px;
+    }
+  }
 
   &_menu {
 
@@ -38,6 +58,15 @@
 
       svg {
         margin-right: 14px;
+      }
+
+      &.active,
+      &:hover {
+        color: $pink;
+    
+        & > .svg {
+          background: $pink;
+        }
       }
     }
   }

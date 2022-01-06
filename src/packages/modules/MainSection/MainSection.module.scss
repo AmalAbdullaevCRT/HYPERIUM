@@ -1,0 +1,13 @@
+.main_section {
+
+  position: fixed;
+
+  background: url("/static/images/background-head.png") no-repeat top center;
+  background-size: cover;
+
+  @include scale((
+    height: [70px, 100px, 1165px],
+  ));
+
+  @include container();
+}

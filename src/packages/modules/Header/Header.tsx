@@ -6,16 +6,16 @@ import { MouseContext } from '@components/MouseContext'
 
 // import Typography from '@components/Typography'
 import styles from './Header.module.scss'
-import { home, logo } from './svg'
+import { facebook,home, logo, twitter } from './svg'
 
 const Header: VFC = () => {
   const { cursorChangeHandler } = useContext(MouseContext)
 
   return (
     <header className={styles.header}>
-      <div className={styles.header_logo}>
+      <a href="#" className={styles.header_logo}>
         { logo }
-      </div>
+      </a>
       <div className={styles.header_menu}>
         <Link href="#" passHref >
           <a
@@ -60,7 +60,8 @@ const Header: VFC = () => {
         </Link>
       </div>
       <div className={styles.header_aside}>
-        
+        <a href="#" className={styles.header_aside_item}>{twitter}</a>
+        <a href="#" className={styles.header_aside_item}>{facebook}</a>
       </div>
     </header>
   )
