@@ -1,12 +1,11 @@
 import Head from 'next/head'
 
-export default function Custom404() {
+export default function HomePage() {
   return (
     <>
       <Head>
         <title>Главная</title>
       </Head>
-      123
     </>
   )
 }

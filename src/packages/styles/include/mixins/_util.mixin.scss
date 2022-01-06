@@ -134,3 +134,20 @@ div {
     border: 0;
   }
 }
+
+/*
+Миксин для создания контейнера
+Пример использования:
+div {
+  @include container(64px);
+}
+*/
+@mixin container($paddings: 64px) {
+  width: 100%;
+
+  @include scale(
+    (
+      padding: 0 $paddings,
+    )
+  );
+}

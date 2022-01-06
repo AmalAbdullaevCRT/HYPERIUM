@@ -8,6 +8,9 @@
       "@components": ["packages/components"],
       "@components/*": ["packages/components/*"],
 
+      "@modules": ["packages/modules"],
+      "@modules/*": ["packages/modules/*"],
+
       "@hooks": ["packages/hooks"],
       "@hooks/*": ["packages/hooks/*"],
 

@@ -1,0 +1,14 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include scale(
+    (
+      padding-top: 64px !important,
+      padding-bottom: 64px !important,
+    )
+  );
+
+  @include container();
+}
