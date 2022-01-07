@@ -7,8 +7,6 @@ import {
 
 import clsx from 'clsx'
 
-import Typography from '@components/Typography'
-
 import classes from './Button.module.scss'
 import { ButtonProps } from './types'
 
@@ -24,6 +22,7 @@ const Button = forwardRef<HTMLAnchorElement | HTMLButtonElement, ButtonProps>(
       target,
       flex,
       children,
+      size = 'large',
       className,
       ...props
     },
@@ -34,6 +33,7 @@ const Button = forwardRef<HTMLAnchorElement | HTMLButtonElement, ButtonProps>(
         'button',
         className,
         classes.button,
+        classes[size],
         classes[color],
         classes[variant],
         {
@@ -50,9 +50,7 @@ const Button = forwardRef<HTMLAnchorElement | HTMLButtonElement, ButtonProps>(
     const btnContent = (
       <>
         {children && (
-          <Typography variant="" className={clsx('button__text', classes.text)}>
-            {children}
-          </Typography>
+         <span>{children}</span>
         )}
       </>
     )

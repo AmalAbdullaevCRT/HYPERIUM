@@ -2,21 +2,18 @@
 
   position: fixed;
   width: 100%;
+  background-color: $main-color;
 
-  background: url("/static/images/background-head.png") no-repeat top center;
-  background-size: cover;
-
+  // background: url("/static/images/background-head.png") no-repeat top center;
+  // background-size: cover;
   // @include container();
 
   &_wrapper {
     display: flex;
     width: 100%;
     justify-content: center;
-    margin-top: 180px;
-
-    @include scale((
-      height: [70px, 100px, 1165px],
-    ));
+    margin-top: 190px;
+    margin-bottom: 100px;
   }
 
   &_block {
@@ -45,8 +42,12 @@
     line-height: 145%;
   }
 
-  img {
-    max-width: 100%;
+  &_img {
+    min-width: 500px;
     height: auto;
+  }
+
+  &_button {
+    margin-top: 36px;
   }
 }

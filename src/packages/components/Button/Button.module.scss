@@ -1,44 +1,72 @@
-// .button {
-//   display: inline-flex;
-//   align-items: center;
-//   justify-content: center;
-//   border: 0;
-//   margin: 0;
-//   background-color: transparent;
-//   cursor: pointer;
-//   text-decoration: none;
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  margin: 36px 0px;
+  backdrop-filter: blur(50px);
+  background: linear-gradient(83.96deg, rgba(239, 32, 138, 0.15) 0%, rgba(239, 32, 138, 0.0885) 100%);
 
-//   @include scale(
-//     (
-//       padding: 0 35px,
-//       border-radius: 10px,
-//     )
-//   );
+  color: $white;
 
-//   &:disabled {
-//     cursor: default;
-//     opacity: 0.15;
-//     pointer-events: none;
-//   }
+  cursor: pointer;
+  font-size: 16px;
 
-//   & > .text {
-//     font-style: normal;
-//     font-weight: normal;
-//     white-space: nowrap;
-//   }
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 0.065em;
+  line-height: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
 
-//   &.flex {
-//     width: 100%;
-//   }
 
-//   /** STYLE **/
+  &:hover {
+    background-color: $pink;
+  }
 
-//   // &.filled {
-//   //   @each $property, $value in $colorsList {
-//   //     &.#{$property} {
-//   //       background-color: var(--color-#{$property});
-//   //       color: color-contrast($value);
-//   //     }
-//   //   }
-//   // }
-// }
+  &:before,
+  &:after,
+  &>:first-child:before,
+  &>:first-child:after {
+    position: absolute;
+    width: 18px; 
+    height: 18px;
+    border-style: solid; /* or whatever style */
+    border-color: $pink; /* or whatever colour */
+    content: " ";
+  }
+
+  &:before {
+    top: 0;
+    left: 0;
+    border-width: 1px 0 0 1px
+  }
+
+  &:after {
+    top: 0;
+    right: 0;
+    border-width: 1px 1px 0 0
+  }
+
+  &>:first-child:before {
+    right: 0;
+    bottom: 0;
+    border-width: 0 1px 1px 0
+  }
+
+  &>:first-child:after {
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 1px 1px
+  }
+}
+
+.medium {
+  width: 266px;
+  height: 58px;
+}
+
+.large {
+  width: 190px;
+  height: 70px;
+}

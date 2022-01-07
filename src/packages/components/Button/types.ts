@@ -3,12 +3,14 @@ import { AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react'
 import { TColor } from '../../types'
 
 export type TVariant = 'filled'
+export type Size = 'large' | 'medium'
 
 export interface IButton
   extends Pick<AnchorHTMLAttributes<HTMLAnchorElement>, 'href' | 'target'> {
   variant?: TVariant
   color?: TColor
   flex?: boolean
+  size: Size
 }
 
 type AnchorButtonProps = IButton & AnchorHTMLAttributes<HTMLAnchorElement>

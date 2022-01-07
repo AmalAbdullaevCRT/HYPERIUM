@@ -5,8 +5,16 @@ $drukcyr: "Druk Cyr";
   font-family: "Geometria";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/Geometria-Thin.woff2") format("woff2"),
+  src: url("../fonts/Geometria-Regular.woff2") format("woff2"),
     url("../fonts/Geometria-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Geometria";
+  font-style: bold;
+  font-weight: bold;
+  src: url("../fonts/Geometria-Bold.woff2") format("woff2"),
+    url("../fonts/Geometria-Bold.woff") format("woff");
 }
 
 @font-face {
