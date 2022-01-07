@@ -1,13 +1,20 @@
 .header {
   position: fixed;
   display: flex;
+  width: 100%;
   align-items: center;
+  padding-top: 42px;
+  // margin-left: 135px;
+  // margin-right: 135px;
+  
 
   @include scale((
-    height: [70px, 100px, 100px],
+    height: 100px,
+    margin-left: 135px, 
+    margin-right: 135px, 
   ));
 
-  @include container();
+  // @include container();
 
   &_logo {
     @include scale((
@@ -19,11 +26,9 @@
     display: flex;
     align-items: center;
 
-    margin-left: auto;
-
     @include scale((
-      margin-right [70px, 75px, 140px],
-    ));
+        margin-left 150px,
+      ));
 
     &_item {
       display: flex;
@@ -37,24 +42,19 @@
     display: flex;
     justify-content: space-between;
 
-    @include scale(
-      (
-        gap: 64px,
-      )
-    );
 
     &_item {
       display: flex;
-      align-items: center;
-
-      /* identical to box height */
       color: $text-gray;
       font-size: 15px;
       font-weight: normal;
       line-height: 19px;
       text-decoration: none;
-
       text-transform: uppercase;
+
+      @include scale((
+        margin-right: 50px,
+      ));
 
       svg {
         margin-right: 14px;

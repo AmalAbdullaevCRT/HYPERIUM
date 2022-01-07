@@ -1,13 +1,52 @@
 .main_section {
 
   position: fixed;
+  width: 100%;
 
   background: url("/static/images/background-head.png") no-repeat top center;
   background-size: cover;
 
-  @include scale((
-    height: [70px, 100px, 1165px],
-  ));
+  // @include container();
 
-  @include container();
+  &_wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 180px;
+
+    @include scale((
+      height: [70px, 100px, 1165px],
+    ));
+  }
+
+  &_block {
+    width: 550px;
+  }
+
+  &_title {
+
+    color: #FFFFFF;
+    font-family: $drukcyr;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    line-height: 55px;
+    text-transform: uppercase;
+  }
+
+  &_description {
+    margin-top: 36px;
+    color: #A1A3B0;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0.04em;
+    line-height: 145%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
