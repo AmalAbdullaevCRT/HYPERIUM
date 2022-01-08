@@ -1,6 +1,6 @@
 {
   "plugins": ["stylelint-scss"],
-  "extends": ["stylelint-config-airbnb", "stylelint-config-idiomatic-order"],
+  "extends": [],
   "rules": {
     "at-rule-no-unknown": null,
     "scss/at-rule-no-unknown": true,

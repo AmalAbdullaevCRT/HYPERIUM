@@ -4,6 +4,19 @@
   width: 100%;
   align-items: center;
   padding-top: 42px;
+  $header: &;
+
+  .logo {
+    display: block;
+    width: 95px;
+    height: 35px;
+    margin-right: 75px;
+    margin-left: 20px;
+  }
+
+  .mobileLogo {
+    display: none;
+  }
   
   @include scale((
     height: 100px,
@@ -13,11 +26,11 @@
 
   @include phone() {
 
-    &_logo {
+    .logo {
       display: none;
     }
 
-    &_mobileLogo {
+    .mobileLogo {
       display: block;
       width: 70px;
       height: 25px;
@@ -34,6 +47,7 @@
 
     &_hamburger {
       width: 23px;
+      $hamburger: &hamburger;
   
       .item {
         position: relative;
@@ -83,18 +97,6 @@
       }
       $hamburger: &;
     }     
-  }
-
-  &_logo {
-    display: block;
-    width: 95px;
-    height: 35px;
-    margin-right: 75px;
-    margin-left: 20px;
-  }
-
-  &_mobileLogo {
-    display: none;
   }
 
   &_hamburger {
@@ -174,6 +176,4 @@
       }
     }
   }
-  $header: &;
-  $header: &;
 }

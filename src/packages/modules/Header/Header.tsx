@@ -21,10 +21,10 @@ const Header: VFC = () => {
         <div className={clsx(styles.meat,styles.item)}></div>
         <div className={clsx(styles.bottom,styles.item)}></div>
       </label>
-      <a href="#" className={styles.header_logo}>
+      <a href="#" className={styles.logo}>
         { logo }
       </a>
-      <a href="#" className={styles.header_mobileLogo}>
+      <a href="#" className={styles.mobileLogo}>
         { mobileLogo }
       </a>
       <div className={styles.header_menu}>
