@@ -4,6 +4,7 @@
   width: 100%;
   align-items: center;
   padding-top: 42px;
+  $header: &;
   
   @include scale((
     height: 100px,
@@ -48,6 +49,7 @@
   @include phone() {
 
     &_hamburger {
+      $hamburger: &;
       width: 23px;
   
       .item {
@@ -96,8 +98,6 @@
           height: 340px;
         }
       }
-      $hamburger: &;
-      $hamburger: &;
     }     
   }
 
