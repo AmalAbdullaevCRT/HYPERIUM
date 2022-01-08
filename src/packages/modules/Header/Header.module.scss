@@ -11,6 +11,21 @@
     margin-right: [0, 0, 135px], 
   ));
 
+  @include desktop() {
+
+    &_logo {
+      display: block;
+      width: 95px;
+      height: 35px;
+      margin-right: 75px;
+      margin-left: 20px;
+    }
+  
+    &_mobileLogo {
+      display: none;
+    }
+  }
+
   @include phone() {
 
     &_logo {
@@ -82,21 +97,8 @@
         }
       }
       $hamburger: &;
-
       $hamburger: &;
     }     
-  }
-
-  &_logo {
-    display: block;
-    width: 95px;
-    height: 35px;
-    margin-right: 75px;
-    margin-left: 20px;
-  }
-
-  &_mobileLogo {
-    display: none;
   }
 
   &_hamburger {
