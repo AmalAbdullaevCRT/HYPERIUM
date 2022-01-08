@@ -4,43 +4,151 @@
   width: 100%;
   align-items: center;
   padding-top: 42px;
-  // margin-left: 135px;
-  // margin-right: 135px;
   
 
   @include scale((
     height: 100px,
-    margin-left: 135px, 
-    margin-right: 135px, 
+    margin-left: [0, 0, 135px], 
+    margin-right: [0, 0, 135px], 
   ));
 
-  // @include container();
+  @include phone() {
+
+    &_logo {
+      display: none;
+    }
+
+    &_mobileLogo {
+      display: block;
+      width: 70px;
+      height: 25px;
+      margin-right: 0;
+      margin-left: 20px;
+    }
+  }
+
+  @include phone() {
+    padding: 25px 35px;
+  }
+
+  @include phone() {
+
+    &_hamburger {
+      width: 23px;
+  
+      .item {
+        position: relative;
+        width: 18px;
+        height: 3px;
+        background-color: $pink;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+
+        &:not(:first-child) {
+          margin-top: 5px;
+        }
+      }
+  
+      &_input {
+        display: none;
+
+        &:checked + #{$hamburger} .item {
+          -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+  
+        &:checked + #{$hamburger} .top {
+          width: 24px;
+          margin-top: 10px;
+        }
+  
+        &:checked + #{$hamburger} .meat {
+          width: 24px;
+          margin-top: -4px;
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+  
+        &:checked + #{$hamburger} .bottom {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+
+        &:not(:checked) + #{$hamburger} .meat {
+          width: 23px;
+        }
+  
+        &:checked ~ #{$header}_menu {
+          height: 340px;
+        }
+      }
+
+      $hamburger: &;
+    }     
+  }
 
   &_logo {
-    @include scale((
-      margin-right: [70px, 75px, 75px],
-    ));
+    display: block;
+    width: 95px;
+    height: 35px;
+    margin-right: 75px;
+    margin-left: 20px;
   }
+
+  &_mobileLogo {
+    display: none;
+  }
+
+  &_hamburger {
+
+    &_input {
+      display: none;
+    }
+  }
+
+  // @include container();
 
   &_aside {
     display: flex;
     align-items: center;
 
     @include scale((
-        margin-left 150px,
-      ));
+      margin-left: [90px, 90px, 150px],
+    ));
 
     &_item {
       display: flex;
       align-items: center;
-      margin-right: 55px;
+
+      @include scale((
+        margin-right: [30px, 30px, 55px],
+      ));
     }
   }
 
   &_menu {
+    z-index: 120;
 
     display: flex;
+    display: -ms-grid;
+    display: grid;
+    overflow: hidden;
+
+    width: 100%;
+    width: auto;
+    height: 0px;
     justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    background-color: #02173F;
+    clear: both;
+    grid-row-gap: 25px;
+    grid-template-rows: 1fr repeat(4, 0.5fr);
+    list-style: none;
+    text-align: center;
+    -webkit-transition: all 0.3s ease;
+    transition: height .4s ease;
+    transition: all 0.3s ease;
 
 
     &_item {
@@ -70,4 +178,8 @@
       }
     }
   }
+
+  $header: &;
 }
+
+  

@@ -2,19 +2,30 @@ import { useContext, VFC } from 'react'
 
 import Link from 'next/link'
 
+import clsx from 'clsx'
+
 import { MouseContext } from '@components/MouseContext'
 
 // import Typography from '@components/Typography'
 import styles from './Header.module.scss'
-import { facebook,home, logo, twitter } from './svg'
+import { facebook,home, logo, mobileLogo,twitter } from './svg'
 
 const Header: VFC = () => {
   const { cursorChangeHandler } = useContext(MouseContext)
 
   return (
     <header className={styles.header}>
+      <input id="burger" type="checkbox" className={styles.header_hamburger_input} />
+      <label className={styles.header_hamburger} htmlFor="burger">
+        <div className={clsx(styles.top,styles.item)}></div>
+        <div className={clsx(styles.meat,styles.item)}></div>
+        <div className={clsx(styles.bottom,styles.item)}></div>
+      </label>
       <a href="#" className={styles.header_logo}>
         { logo }
+      </a>
+      <a href="#" className={styles.header_mobileLogo}>
+        { mobileLogo }
       </a>
       <div className={styles.header_menu}>
         <Link href="#" passHref >
