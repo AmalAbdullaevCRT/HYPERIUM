@@ -4,28 +4,12 @@
   width: 100%;
   align-items: center;
   padding-top: 42px;
-  $header: &;
   
   @include scale((
     height: 100px,
     margin-left: [0, 0, 135px], 
     margin-right: [0, 0, 135px], 
   ));
-
-  @include desktop() {
-
-    &_logo {
-      display: block;
-      width: 95px;
-      height: 35px;
-      margin-right: 75px;
-      margin-left: 20px;
-    }
-  
-    &_mobileLogo {
-      display: none;
-    }
-  }
 
   @include phone() {
 
@@ -49,7 +33,6 @@
   @include phone() {
 
     &_hamburger {
-      $hamburger: &;
       width: 23px;
   
       .item {
@@ -98,7 +81,20 @@
           height: 340px;
         }
       }
+      $hamburger: &;
     }     
+  }
+
+  &_logo {
+    display: block;
+    width: 95px;
+    height: 35px;
+    margin-right: 75px;
+    margin-left: 20px;
+  }
+
+  &_mobileLogo {
+    display: none;
   }
 
   &_hamburger {
@@ -178,5 +174,6 @@
       }
     }
   }
+  $header: &;
   $header: &;
 }
