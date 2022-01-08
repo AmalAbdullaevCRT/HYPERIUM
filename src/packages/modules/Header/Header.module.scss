@@ -77,9 +77,9 @@
           width: 23px;
         }
   
-        // &:checked ~ #{$header}_menu {
-        //   height: 340px;
-        // }
+        &:checked ~ #{$header}_menu {
+          height: 340px;
+        }
       }
       $hamburger: &;
 
@@ -176,6 +176,5 @@
       }
     }
   }
+  $header: &;
 }
-
-  
