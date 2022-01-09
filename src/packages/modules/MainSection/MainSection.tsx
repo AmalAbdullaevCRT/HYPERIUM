@@ -1,5 +1,7 @@
 import { VFC } from 'react'
 
+import Image from 'next/image'
+
 import Button from '@components/Button'
 
 import styles from './MainSection.module.scss'
@@ -15,7 +17,9 @@ const MainSection: VFC<MainSectionProps> = ({ children }) => {
         <div className={styles.main_section_wrapper}>
           <div className={styles.main_section_block}>
             <div className={styles.main_section_title}>
-              The Afterlife has been <span>hacked</span> 
+              <div>The Afterlife</div> 
+              <div>has been</div>
+              <div>hacked</div> 
             </div>
             <div className={styles.main_section_description}>
               CODE HYPERIUM is a co-creative NFT project bringing top artists, writers, 
@@ -30,13 +34,13 @@ const MainSection: VFC<MainSectionProps> = ({ children }) => {
             </div>
           </div>
           <div className={styles.main_section_img}>
-            {/* <Image
+            <Image
               src="/static/images/fortnite-skin1.png"
               alt="fortnite"
               width={563}
               height={562}
               className={styles.main_section_img}
-            /> */}
+            />
           </div>
         </div>
     </div>

@@ -45,6 +45,14 @@ const Header: VFC = () => {
               co-creative ethos
             </a>
           </Link>
+          <Link href="#" passHref >
+            <a
+              onMouseMove={() => cursorChangeHandler('hovered')}
+              onMouseLeave={() => cursorChangeHandler('')}
+              className={styles.header_menu_item}>
+              factions
+            </a>
+          </Link>
           <Link href="#" passHref>
             <a
               onMouseMove={() => cursorChangeHandler('hovered')}
