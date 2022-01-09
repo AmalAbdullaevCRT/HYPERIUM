@@ -1,6 +1,5 @@
 import { VFC } from 'react'
-
-import Image from 'next/image'
+import { isMobile } from 'react-device-detect'
 
 import Button from '@components/Button'
 
@@ -11,6 +10,7 @@ interface MainSectionProps {
 }
 
 const MainSection: VFC<MainSectionProps> = ({ children }) => {
+
   return (
     <div className={styles.main_section}>
         {children}
@@ -18,8 +18,8 @@ const MainSection: VFC<MainSectionProps> = ({ children }) => {
           <div className={styles.main_section_block}>
             <div className={styles.main_section_title}>
               <div>The Afterlife</div> 
-              <div>has been</div>
-              <div>hacked</div> 
+              <div>has <span className={styles.pink_text}>been</span></div>
+              <div><span className={styles.pink_text}>hacked</span></div> 
             </div>
             <div className={styles.main_section_description}>
               CODE HYPERIUM is a co-creative NFT project bringing top artists, writers, 
@@ -27,21 +27,20 @@ const MainSection: VFC<MainSectionProps> = ({ children }) => {
               cyberpunk world — one masterpiece at a time.
             </div>
             <div className={styles.main_section_button}>
-              <Button
+              {!isMobile && (<Button
+                size="large"
                 onClick={() => {}}>
-                Factions
-              </Button>
+                Fractions
+              </Button>)}
             </div>
           </div>
-          <div className={styles.main_section_img}>
-            <Image
-              src="/static/images/fortnite-skin1.png"
-              alt="fortnite"
-              width={563}
-              height={562}
-              className={styles.main_section_img}
-            />
-          </div>
+          <div className={styles.main_section_img_block}>
+              {isMobile && (<Button
+                size="medium"
+                onClick={() => {}}>
+                Fractions
+              </Button>)}
+          </div>  
         </div>
     </div>
   )

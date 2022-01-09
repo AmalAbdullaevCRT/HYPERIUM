@@ -1,27 +1,40 @@
 .main_section {
 
-  position: fixed;
+  // position: fixed;
   width: 100%;
   background-color: $main-color;
-  height: 970px;
+
+  @include scale((
+    height: [670px, 670px, 970px],
+  ));
 
   background: url("/static/images/background-head.png") no-repeat top center;
   background-size: cover;
 
+
   &_wrapper {
     display: flex;
     width: 100%;
-    justify-content: center;
-    margin-top: 190px;
-    margin-bottom: 100px;
+
+    @include scale((
+      padding-left: [0, 0, 235px],
+      margin-top: [25px, 25px, 125px],
+      margin-bottom: [0, 0, 100px]
+    ));
+
+    @include phone() {
+      flex-direction: column;
+    }
   }
 
   &_block {
     width: 550px;
+    @include phone() {
+      width: auto;
+    }
   }
 
   &_title {
-
     color: #FFFFFF;
     font-family: $drukcyr;
     font-size: 45px;
@@ -30,6 +43,12 @@
     letter-spacing: 0.05em;
     line-height: 55px;
     text-transform: uppercase;
+
+    @include phone() {
+      text-align: center;
+      font-size: 25px;
+      line-height: normal;
+    }
   }
 
   &_description {
@@ -40,14 +59,44 @@
     font-weight: normal;
     letter-spacing: 0.04em;
     line-height: 145%;
+
+    @include phone() {
+      text-align: center;
+      font-size: 12px;
+      margin-top: 22px;
+      padding: 0 25px;
+    }
   }
 
   &_img {
-    min-width: 500px;
-    height: auto;
+    &_block {
+      width: 563px;
+      height: 563px;
+      background: url("/static/images/fortnite-skin1.png") no-repeat top center;
+      background-size: cover;
+
+      @include phone() {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: 356px;
+        background: url("/static/images/fortnite-skin1-mobile.png") no-repeat top center;
+        background-size: cover;
+      }
+    }
   }
 
   &_button {
     margin-top: 36px;
+
+    @include phone() {
+      display: flex;
+      justify-content: center;
+    }
   }
+}
+
+.pink_text {
+  color: $pink;
 }
