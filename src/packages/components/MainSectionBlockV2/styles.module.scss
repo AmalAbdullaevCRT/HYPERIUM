@@ -1,0 +1,40 @@
+.main_section {
+
+  &_title {
+    color: #FFFFFF;
+    font-family: $drukcyr;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    line-height: 55px;
+    text-transform: uppercase;
+
+    @include phone() {
+      text-align: center;
+      font-size: 25px;
+      line-height: normal;
+    }
+  }
+
+  &_description {
+    margin-top: 36px;
+    color: #A1A3B0;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0.04em;
+    line-height: 145%;
+
+    @include phone() {
+      text-align: center;
+      font-size: 12px;
+      margin-top: 22px;
+      padding: 0 25px;
+    }
+  }
+}
+
+.pink_text {
+  color: $pink;
+}
