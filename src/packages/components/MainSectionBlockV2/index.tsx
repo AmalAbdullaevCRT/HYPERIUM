@@ -8,7 +8,7 @@ const MainSectionBlockV2: VFC = () => {
     <div>
       <div className={styles.main_section_title}>
         <div><span className={styles.pink_text}>CODE HYPERIUM</span></div> 
-        <div>is a co-created world</div>
+        <div>is a co-created</div>
         <div>world</div> 
       </div>
       <div className={styles.main_section_description}>

@@ -11,9 +11,10 @@
     text-transform: uppercase;
 
     @include phone() {
-      text-align: center;
+      // text-align: center;
       font-size: 25px;
-      line-height: normal;
+      line-height: 35px;
+      padding: 0 25px;
     }
   }
 
@@ -27,7 +28,7 @@
     line-height: 145%;
 
     @include phone() {
-      text-align: center;
+      // text-align: center;
       font-size: 12px;
       margin-top: 22px;
       padding: 0 25px;

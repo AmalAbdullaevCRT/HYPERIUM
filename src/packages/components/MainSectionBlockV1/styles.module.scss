@@ -13,7 +13,8 @@
     @include phone() {
       text-align: center;
       font-size: 25px;
-      line-height: normal;
+      line-height: 35px;
+      padding: 0 26px;
     }
   }
 

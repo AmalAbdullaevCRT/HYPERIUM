@@ -1,7 +1,8 @@
-import { useContext, useState, VFC } from 'react'
+import { useContext, useEffect, useState, VFC } from 'react'
 import { useMediaQuery } from 'react-responsive'
 
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import clsx from 'clsx'
 
@@ -16,13 +17,28 @@ const Header: VFC = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 })
   const [menuIsOpen, setMenuIsOpen] = useState(false)
 
+  const router = useRouter()
+
+  useEffect(() => {
+    const handleRouteChange = (url, { shallow }) => {
+      setMenuIsOpen(false)
+    }
+
+    router.events.on('routeChangeStart', handleRouteChange)
+
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChange)
+    }
+  }, [])
+
+
   const handleCheck = (event) => {
     setMenuIsOpen(event.target.checked)
   }
 
   return (
     <header className={clsx(styles.header, styles[menuIsOpen? 'black': 'inherit'])}>
-        <input id="burger" type="checkbox" className={styles.header_hamburger_input} onChange={handleCheck} />
+        <input id="burger" checked={menuIsOpen} type="checkbox" className={styles.header_hamburger_input} onChange={handleCheck} />
         <label className={styles.header_hamburger} htmlFor="burger">
           <div className={clsx(styles.top,styles.item)}></div>
           <div className={clsx(styles.meat,styles.item)}></div>
@@ -51,7 +67,7 @@ const Header: VFC = () => {
               co-creative ethos
             </a>
           </Link>
-          <Link href="#" passHref >
+          <Link href="/" passHref >
             <a
               onMouseMove={() => cursorChangeHandler('hovered')}
               onMouseLeave={() => cursorChangeHandler('')}
@@ -59,7 +75,7 @@ const Header: VFC = () => {
               factions
             </a>
           </Link>
-          <Link href="#" passHref>
+          <Link href="/" passHref>
             <a
               onMouseMove={() => cursorChangeHandler('hovered')}
               onMouseLeave={() => cursorChangeHandler('')}
@@ -67,7 +83,7 @@ const Header: VFC = () => {
                 team
             </a>
           </Link>
-          <Link href="#" passHref>
+          <Link href="/" passHref>
             <a
               onMouseMove={() => cursorChangeHandler('hovered')}
               onMouseLeave={() => cursorChangeHandler('')}
@@ -75,7 +91,7 @@ const Header: VFC = () => {
               roadmap
             </a>
           </Link>
-          <Link href="#" passHref>
+          <Link href="/" passHref>
             <a
               onMouseMove={() => cursorChangeHandler('hovered')}
               onMouseLeave={() => cursorChangeHandler('')}
@@ -85,8 +101,8 @@ const Header: VFC = () => {
           </Link>
         </div>
         <div className={styles.header_aside}>
-          <a href="#" className={styles.header_aside_item}>{twitter}</a>
-          <a href="#" className={styles.header_aside_item}>{facebook}</a>
+          <a href="https://twitter.com/" className={styles.header_aside_item}>{twitter}</a>
+          <a href="https://www.facebook.com/" className={styles.header_aside_item}>{facebook}</a>
         </div>
     </header>
   )
