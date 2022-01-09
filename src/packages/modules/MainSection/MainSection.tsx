@@ -1,5 +1,5 @@
 import { ReactNode, VFC } from 'react'
-import { isMobile } from 'react-device-detect'
+import { useMediaQuery } from 'react-responsive'
 
 import Button from '@components/Button'
 
@@ -8,13 +8,16 @@ import styles from './MainSection.module.scss'
 interface MainSectionProps {
   children: ReactNode
   imgURL: string
+  backgroundImgURL: string
   mainSectionBlock: ReactNode
 }
 
-const MainSection: VFC<MainSectionProps> = ({ children, imgURL, mainSectionBlock }) => {
-
+const MainSection: VFC<MainSectionProps> = ({ children, imgURL, mainSectionBlock, backgroundImgURL }) => {
+  const isMobile = useMediaQuery({ maxWidth: 767 })
   return (
-    <div className={styles.main_section}>
+    <div className={styles.main_section} style={{
+      backgroundImage: `url(${backgroundImgURL})`
+    }}>
         {children}
         <div className={styles.main_section_wrapper}>
           <div className={styles.main_section_block}>

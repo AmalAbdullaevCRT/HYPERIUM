@@ -1,4 +1,5 @@
 import { useContext, useState, VFC } from 'react'
+import { useMediaQuery } from 'react-responsive'
 
 import Link from 'next/link'
 
@@ -12,6 +13,7 @@ import { facebook,home, logo, mobileLogo,twitter } from './svg'
 
 const Header: VFC = () => {
   const { cursorChangeHandler } = useContext(MouseContext)
+  const isMobile = useMediaQuery({ maxWidth: 767 })
   const [menuIsOpen, setMenuIsOpen] = useState(false)
 
   const handleCheck = (event) => {
@@ -26,14 +28,13 @@ const Header: VFC = () => {
           <div className={clsx(styles.meat,styles.item)}></div>
           <div className={clsx(styles.bottom,styles.item)}></div>
         </label>
-        <a href="#" className={styles.logo}>
-          { logo }
-        </a>
-        <a href="#" className={styles.mobileLogo}>
-          { mobileLogo }
-        </a>
+        <Link href="/">
+          <a className={styles.logo}>
+            { isMobile ? mobileLogo : logo}
+          </a>
+        </Link>
         <div className={styles.header_menu}>
-          <Link href="#" passHref >
+          <Link href="/" passHref >
             <a
               onMouseMove={() => cursorChangeHandler('hovered')}
               onMouseLeave={() => cursorChangeHandler('')}
@@ -42,7 +43,7 @@ const Header: VFC = () => {
               Home
             </a>
           </Link>
-          <Link href="#" passHref >
+          <Link href="/co-creative-ethos" passHref >
             <a
               onMouseMove={() => cursorChangeHandler('hovered')}
               onMouseLeave={() => cursorChangeHandler('')}

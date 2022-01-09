@@ -9,9 +9,9 @@
     height: [670px, 670px, 970px],
   ));
 
-  background: url("/static/images/background-head.png") no-repeat top center;
+  background-position: top center;
+  background-repeat: no-repeat;
   background-size: cover;
-
 
   &_wrapper {
     display: flex;

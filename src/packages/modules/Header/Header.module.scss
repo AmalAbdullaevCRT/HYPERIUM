@@ -18,20 +18,8 @@
     width: 95px;
     height: 35px;
     margin-right: 75px;
-  }
 
-  .mobileLogo {
-    display: none;
-  }
-  
-  @include phone() {
-
-    .logo {
-      display: none;
-    }
-
-    .mobileLogo {
-      display: block;
+    @include phone() {
       width: 70px;
       height: 25px;
       margin-right: 0;

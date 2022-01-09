@@ -6,7 +6,7 @@ export default function Custom404() {
       <Head>
         <title>Страница не найдена</title>
       </Head>
-      123
+      Not Found
     </>
   )
 }

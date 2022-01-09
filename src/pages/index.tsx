@@ -8,9 +8,13 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title>Главная</title>
+        <title>History</title>
       </Head>
-      <MainSection imgURL="/static/images/fortnite-skin1.png" mainSectionBlock={<MainSectionBlockV1 />}>
+      <MainSection 
+        backgroundImgURL="/static/images/background-head2.png"
+        imgURL="/static/images/fortnite-skin1.png" 
+        mainSectionBlock={<MainSectionBlockV1 />}
+      >
       </MainSection>
     </>
   )
