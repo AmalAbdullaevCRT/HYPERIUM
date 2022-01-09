@@ -1,4 +1,4 @@
-import { useContext, VFC } from 'react'
+import { useContext, useState, VFC } from 'react'
 
 import Link from 'next/link'
 
@@ -12,10 +12,15 @@ import { facebook,home, logo, mobileLogo,twitter } from './svg'
 
 const Header: VFC = () => {
   const { cursorChangeHandler } = useContext(MouseContext)
+  const [menuIsOpen, setMenuIsOpen] = useState(false)
+
+  const handleCheck = (event) => {
+    setMenuIsOpen(event.target.checked)
+  }
 
   return (
-    <header className={styles.header}>
-        <input id="burger" type="checkbox" className={styles.header_hamburger_input} />
+    <header className={clsx(styles.header, styles[menuIsOpen? 'black': 'inherit'])}>
+        <input id="burger" type="checkbox" className={styles.header_hamburger_input} onChange={handleCheck} />
         <label className={styles.header_hamburger} htmlFor="burger">
           <div className={clsx(styles.top,styles.item)}></div>
           <div className={clsx(styles.meat,styles.item)}></div>

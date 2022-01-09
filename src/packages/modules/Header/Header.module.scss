@@ -1,12 +1,12 @@
 .header {
-  // position: fixed;
   display: flex;
   width: 100%;
   align-items: center;
   padding-top: 42px;
   padding-left: 135px;
+  z-index: 100;
+  position: relative;
   $header: &;
-
 
   @include phone() {
     padding: 25px 35px;
@@ -24,11 +24,6 @@
     display: none;
   }
   
-  @include scale((
-    // margin-left: [0, 0, 135px], 
-    // margin-right: [0, 0, 135px], 
-  ));
-
   @include phone() {
 
     .logo {
@@ -93,7 +88,8 @@
         }
   
         &:checked ~ #{$header}_menu {
-          height: 340px;
+          height: 320px;
+          background-color: $menu-color;
         }
       }
     }     
@@ -170,7 +166,10 @@
         line-height: 15px;
         letter-spacing: 0.05em;
         border-top: 1px solid $border_variant;
-        border-bottom: 1px solid $border_variant;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $border_variant;
+        }
 
         svg {
           display: none;
@@ -187,4 +186,8 @@
       }
     }
   }
+}
+
+.black {
+  background-color: $menu-color;
 }

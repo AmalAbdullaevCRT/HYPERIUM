@@ -1,5 +1,7 @@
 .main_section {
 
+  position: absolute;
+  top: 0;
   width: 100%;
   background-color: $main-color;
 
@@ -17,7 +19,7 @@
 
     @include scale((
       padding-left: [0, 0, 235px],
-      margin-top: [25px, 25px, 115px],
+      margin-top: [120px, 120px, 185px],
       margin-bottom: [0, 0, 100px]
     ));
 
