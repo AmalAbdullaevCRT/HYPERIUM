@@ -1,5 +1,5 @@
 $geometria: "Geometria";
-$drukcyr: "Druk Cyr";
+$drukcyr: "Druk Cyr Wide";
 
 @font-face {
   font-family: "Geometria";
@@ -18,9 +18,9 @@ $drukcyr: "Druk Cyr";
 }
 
 @font-face {
-  font-family: "Druk Cyr";
+  font-family: "Druk Cyr Wide";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/DrukCyr-Bold.woff2") format("woff2"),
-    url("../fonts/DrukCyr-Bold.woff") format("woff");
+  src: url("../fonts/Druk-Text-Wide-Cyr-Medium.woff2") format("woff2"),
+    url("../fonts/Druk-Text-Wide-Cyr-Medium.woff") format("woff");
 }
