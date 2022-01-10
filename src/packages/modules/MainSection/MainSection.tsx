@@ -33,11 +33,13 @@ const MainSection: VFC<MainSectionProps> = ({ children, imgURL, mainSectionBlock
           <div className={styles.main_section_img_block}   style={{
               backgroundImage: `url(${imgURL})`
             }}>
-              {isMobile && (<Button
-                size="medium"
-                onClick={() => {}}>
-                Fractions
-              </Button>)}
+              <div className={styles.main_section_button}>
+                {isMobile && (<Button
+                  size="medium"
+                  onClick={() => {}}>
+                  Fractions
+                </Button>)}
+              </div>
           </div>  
         </div>
     </div>

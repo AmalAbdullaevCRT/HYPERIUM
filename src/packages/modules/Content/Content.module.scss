@@ -2,4 +2,8 @@
   position: absolute;
   top: 730px;
   width: 100%;
+
+  @include phone() {
+    top: 610px;
+  }
 }

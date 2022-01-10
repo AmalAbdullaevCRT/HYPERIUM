@@ -4,6 +4,10 @@
   display: flex;
   flex-direction: column;
 
+  @include phone() {
+    margin-top: 20px;
+  }
+
   &_title {
 
     display: flex;
@@ -61,6 +65,12 @@
     &_covers {
       display: flex;
       margin-top: 60px;
+
+      @include phone() {
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+      }
     }
 
     &_cover {
@@ -68,17 +78,42 @@
       height: 300px;
       border-radius: 0px 40px;
 
-      &:first-child {
+      @include phone() {
+        height: 127px;
+      }
+
+      &_right {
+        border-radius: 0px 40px;
+
+        @include phone() {
+          border-radius: 0px 0px 10px 10px;
+        }    
+      }
+
+      &_left {
         border-radius: 40px 0px;
+
+        @include phone() {
+          border-radius: 10px 10px 0px 0px;
+        }  
       }
 
       &_wrapper {
         width: 100%;
         position: relative;
 
+        @include phone() {
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
+        }
+
         &:first-child {
           margin-right: 20px;
-          border-radius: 40px 0px;
+
+          @include phone() {
+            margin-right: 0;
+          }          
         }
 
         .button {
@@ -96,6 +131,10 @@
 
         &:first-child {
           border-radius: 40px 0px;
+
+          @include phone() {
+            border-radius: 0px 0px 10px 10px;
+          }     
         }
       }
     }

@@ -9,9 +9,9 @@ import styles from './styles.module.scss'
 interface ChooseYourSideItemProps {
   leftImgURL: string
   rightImgURL: string
-  number: number
-  title: string
-  description: string
+  number?: number
+  title?: string
+  description?: string
 }
 
 const ChooseYourSideItem: VFC<ChooseYourSideItemProps> = ({ leftImgURL, rightImgURL, number, title, description }) => {
@@ -21,15 +21,15 @@ const ChooseYourSideItem: VFC<ChooseYourSideItemProps> = ({ leftImgURL, rightImg
   return (
     <div className={styles.item}>
       <div className={styles.item_title}>
-        <div className={styles.item_title_number}>{number}</div>
-        <div className={styles.item_title_text}>{title}</div>
+        {number && <div className={styles.item_title_number}>{number}</div>}
+        {title && <div className={styles.item_title_text}>{title}</div> }
       </div>
-      <div className={styles.item_description}>{description}</div>
+      {description && <div className={styles.item_description}>{description}</div>}
       <div className={styles.side_covers}>
         <div className={styles.side_cover_wrapper}             
             onMouseEnter={e => setHoveredLeft(true)}
             onMouseLeave={e => setHoveredLeft(false)}>
-          <div className={clsx(styles.side_cover, hoveredLeft && styles.hover)} 
+          <div className={clsx(styles.side_cover, styles.side_cover_left, hoveredLeft && styles.hover)} 
             style={{
               width: '100%',
               backgroundImage: `url(${leftImgURL})`
@@ -47,7 +47,7 @@ const ChooseYourSideItem: VFC<ChooseYourSideItemProps> = ({ leftImgURL, rightImg
         <div className={styles.side_cover_wrapper} 
             onMouseEnter={e => setHoveredRight(true)}
             onMouseLeave={e => setHoveredRight(false)}>
-          <div className={clsx(styles.side_cover, hoveredRight && styles.hover)}            
+          <div className={clsx(styles.side_cover, styles.side_cover_right, hoveredRight && styles.hover)}            
             style={{
                 width: '100%',
                 backgroundImage: `url(${rightImgURL})`

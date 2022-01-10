@@ -12,6 +12,9 @@ const ChooseYourSide: VFC = () => {
       </div>
       <div className={styles.main_history}>
         <div className={styles.main_history_item}>
+        <ChooseYourSideItem
+            leftImgURL="/static/images/fortnite_item1.png" 
+            rightImgURL="/static/images/fortnite_item1.png" />
           <ChooseYourSideItem
             title='History'
             description='Divine Anarchy is the first attempt at an in game 

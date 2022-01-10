@@ -4,6 +4,11 @@
   backdrop-filter: blur(39px);
   border-radius: 80px 80px 0px 0px;
 
+  @include phone() {
+    padding: 27px 25px;
+    border-radius: 20px 20px 0px 0px;
+  }
+
   &_title {
     color: $white;
     font-family: $drukcyr;
@@ -16,6 +21,13 @@
     border-left: 4px solid $pink;
     padding-left: 33px;
 
-    @include phone() {}
+    @include phone() {
+      font-size: 15px;
+      line-height: 18px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      padding-left: 15px;
+    }
   }
 }
