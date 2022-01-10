@@ -1,7 +1,9 @@
 import Head from 'next/head'
 
+import Content from '@modules/Content'
 import MainSection from '@modules/MainSection'
 
+import ChooseYourSide from '@components/ChooseYourSide'
 import MainSectionBlockV1 from '@components/MainSectionBlockV1'
 
 export default function HomePage() {
@@ -16,6 +18,9 @@ export default function HomePage() {
         mainSectionBlock={<MainSectionBlockV1 />}
       >
       </MainSection>
+      <Content>
+        <ChooseYourSide />
+      </Content>
     </>
   )
 }

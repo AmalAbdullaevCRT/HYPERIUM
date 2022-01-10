@@ -1,7 +1,7 @@
 .main_section {
 
   &_title {
-    color: #FFFFFF;
+    color: $white;
     font-family: $drukcyr;
     font-size: 45px;
     font-style: normal;
@@ -20,7 +20,7 @@
 
   &_description {
     margin-top: 36px;
-    color: #A1A3B0;
+    color: $text-gray;
     font-size: 22px;
     font-style: normal;
     font-weight: normal;

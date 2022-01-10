@@ -5,10 +5,6 @@
   width: 100%;
   background-color: $main-color;
 
-  @include scale((
-    height: [670px, 670px, 970px],
-  ));
-
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
