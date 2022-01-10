@@ -64,15 +64,39 @@
     }
 
     &_cover {
-      background-position: top center;
       background-repeat: no-repeat;
-      background-size: cover;
       height: 300px;
       border-radius: 0px 40px;
 
       &:first-child {
-        margin-right: 20px;
         border-radius: 40px 0px;
+      }
+
+      &_wrapper {
+        width: 100%;
+        position: relative;
+
+        &:first-child {
+          margin-right: 20px;
+          border-radius: 40px 0px;
+        }
+
+        .button {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      &.hover {
+        background: $menu-color;
+        opacity: 0.1;
+        border-radius: 0px 40px;
+
+        &:first-child {
+          border-radius: 40px 0px;
+        }
       }
     }
   }

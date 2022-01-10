@@ -22,6 +22,8 @@ const Button = forwardRef<HTMLAnchorElement | HTMLButtonElement, ButtonProps>(
       target,
       flex,
       children,
+      border = 'corner',
+      backgroundColored = true,
       size = 'large',
       className,
       ...props
@@ -36,6 +38,8 @@ const Button = forwardRef<HTMLAnchorElement | HTMLButtonElement, ButtonProps>(
         classes[size],
         classes[color],
         classes[variant],
+        backgroundColored && classes.colored,
+        classes[`border_${border}`],
         {
           [classes.flex]: flex,
         },

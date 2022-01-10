@@ -3,10 +3,8 @@
   align-items: center;
   justify-content: center;
   border: 0;
-  backdrop-filter: blur(50px);
-  background: linear-gradient(83.96deg, rgba(239, 32, 138, 0.15) 0%, rgba(239, 32, 138, 0.0885) 100%);
-
   color: $white;
+  background-color: transparent;
 
   cursor: pointer;
   font-size: 16px;
@@ -18,45 +16,62 @@
   text-decoration: none;
   text-transform: uppercase;
 
-
   &:hover {
     background-color: $pink;
   }
 
-  &:before,
-  &:after,
-  &>:first-child:before,
-  &>:first-child:after {
-    position: absolute;
-    width: 18px; 
-    height: 18px;
-    border-style: solid; /* or whatever style */
-    border-color: $pink; /* or whatever colour */
-    content: " ";
+  &.colored {
+    backdrop-filter: blur(50px);
+    background: linear-gradient(83.96deg, rgba(239, 32, 138, 0.15) 0%, rgba(239, 32, 138, 0.0885) 100%);
   }
 
-  &:before {
-    top: 0;
-    left: 0;
-    border-width: 1px 0 0 1px
-  }
 
-  &:after {
-    top: 0;
-    right: 0;
-    border-width: 1px 1px 0 0
-  }
+  &.border  {
+    &_full {
+      border: 1px solid $pink;
+    }
 
-  &>:first-child:before {
-    right: 0;
-    bottom: 0;
-    border-width: 0 1px 1px 0
-  }
+    &_off {
+      border: 0;
+    }
 
-  &>:first-child:after {
-    bottom: 0;
-    left: 0;
-    border-width: 0 0 1px 1px
+    &_corner {
+      &:before,
+      &:after,
+      &>:first-child:before,
+      &>:first-child:after {
+        position: absolute;
+        width: 18px; 
+        height: 18px;
+        border-style: solid; /* or whatever style */
+        border-color: $pink; /* or whatever colour */
+        content: " ";
+      }
+    
+      &:before {
+        top: 0;
+        left: 0;
+        border-width: 1px 0 0 1px
+      }
+    
+      &:after {
+        top: 0;
+        right: 0;
+        border-width: 1px 1px 0 0
+      }
+    
+      &>:first-child:before {
+        right: 0;
+        bottom: 0;
+        border-width: 0 1px 1px 0
+      }
+    
+      &>:first-child:after {
+        bottom: 0;
+        left: 0;
+        border-width: 0 0 1px 1px
+      }
+    }
   }
 }
 
@@ -68,4 +83,9 @@
 .large {
   width: 190px;
   height: 70px;
+}
+
+.small {
+  width: 190px;
+  height: 50px;
 }
