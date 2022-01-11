@@ -4,6 +4,17 @@
   backdrop-filter: blur(39px);
   border-radius: 80px 80px 0px 0px;
 
+  &_history {
+    transition: max-height 0.25s ease-in;
+    scroll-behavior: auto;
+    overflow: hidden;
+    // height: 100%;
+
+    &_item {
+      // max-height: 500px;
+    }
+  }
+
   @include phone() {
     padding: 27px 25px;
     border-radius: 20px 20px 0px 0px;
