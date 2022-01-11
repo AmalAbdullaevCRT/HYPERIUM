@@ -6,6 +6,9 @@ $pink: #EF208A;
 $white: #FFFFFF;
 $border_variant: #191B29;
 $green_white: #65FFE7;
+$border-gray: #373D52;
+$text-silent: #4C4F5F;
+$border-gray2: #3B3F67;
 
 $colorsList: (
   "text-gray": $text-gray,
@@ -16,4 +19,7 @@ $colorsList: (
   "menu-color": $menu-color,
   "black" : $black,
   "green_white": $green_white,
+  "border-gray": $border-gray,
+  "text-silent": $text-silent,
+  "border-gray2": $border-gray2,
 );

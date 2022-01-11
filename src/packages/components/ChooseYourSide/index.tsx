@@ -6,12 +6,12 @@ import styles from './styles.module.scss'
 
 const ChooseYourSide: VFC = () => {
   const [historyStyles, setHistoryStyles] = useState({
-    maxHeight: 480
+    maxHeight: 420
   })
 
   const chooseYourSideHandler = (idx: number) => {
     setHistoryStyles({
-      maxHeight: historyStyles.maxHeight + 570
+      maxHeight: historyStyles.maxHeight + 520
     })
     scroller.scrollTo(`choose-your-side-${idx}`, {
       duration: 1000,

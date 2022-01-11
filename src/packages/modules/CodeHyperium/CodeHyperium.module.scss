@@ -1,0 +1,139 @@
+.codeHiperium {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 51.04%, rgba(0, 0, 0, 0.42) 100%);
+  background-image: url('/static/images/codeHyperium.png');
+  // filter: blur(19px);
+  margin-top: 60px;
+  margin-bottom: 65px;
+  padding-left: 112px;
+  padding-right: 112px;
+
+  .title {
+    font-family: $drukcyr;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 41px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $white;
+  }
+
+  .description {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 145%;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: $white;
+    margin: 60px 0;
+    padding-bottom: 80px;
+    padding-left: 65px;
+    padding-right: 65px;
+
+    border-bottom: 1px solid $border-gray;
+  }
+
+  .content {
+    &_head {
+      display: flex;
+      justify-content: center;
+      &_side {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 45px;
+        line-height: 57px;
+        text-transform: uppercase;
+        color: $text-silent;
+
+        &:not(:last-child) {
+          margin-right: 50px;
+        }
+
+        &.active {
+          color: $white;
+        }
+      }
+    }
+
+    &_main {
+      margin-top: 56px;
+      display: flex;
+    }
+
+    &_avatar {
+      border: 1px solid $border-gray2;
+      box-sizing: border-box;
+      width: 454px;
+      height: 491px;
+      padding: 10px;
+    }
+
+    &_text {
+      width: 593px;
+      margin-left: 95px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &_title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 38px;
+        line-height: 48px;
+        text-transform: uppercase;
+        margin-bottom: 32px;
+        color: $white;
+      }
+
+      &_description {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 145%;
+
+        letter-spacing: 0.04em;
+        
+        color: $text-gray;
+      }
+    }
+
+    &_borderedBlock {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 28px;
+      line-height: 145%;
+      text-align: center;
+      letter-spacing: 0.04em;
+      background: linear-gradient(91.09deg, rgba(101, 255, 231, 0.05) 1.27%, rgba(101, 255, 231, 0) 95.16%);
+      padding: 54px 37px;
+      color: $white;
+      margin-top: 66px;
+      position: relative;
+
+      &:before,
+      &:after {
+        content: ' ';
+        position: absolute;
+        border: 2px solid rgba(101, 255, 231, 0.23);
+        top: 0;
+        bottom: 0;
+        width: 13px;
+      }
+      &:before {
+        border-right: 0;
+        left: 0;
+      }
+      &:after {
+        border-left: 0;
+        right: 0;
+      }
+    }
+  }
+}
+
+
+.text_green {
+  color: $green_white;
+}

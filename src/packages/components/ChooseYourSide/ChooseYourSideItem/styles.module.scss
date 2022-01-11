@@ -1,6 +1,6 @@
 .item {
   display: flex;
-  margin-top: 70px;
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
 
@@ -83,7 +83,7 @@
 
     &_covers {
       display: flex;
-      margin-top: 60px;
+      margin-top: 20px;
 
       @include phone() {
         margin-top: 0;

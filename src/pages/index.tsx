@@ -1,5 +1,6 @@
 import Head from 'next/head'
 
+import CodeHyperium from '@modules/CodeHyperium'
 import Content from '@modules/Content'
 import MainSection from '@modules/MainSection'
 
@@ -20,6 +21,7 @@ export default function HomePage() {
       </MainSection>
       <Content>
         <ChooseYourSide />
+        <CodeHyperium />
       </Content>
     </>
   )
