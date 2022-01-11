@@ -1,9 +1,11 @@
-import { VFC } from 'react'
+import { useState, VFC } from 'react'
 
 import ChooseYourSideItem from './ChooseYourSideItem'
 import styles from './styles.module.scss'
 
 const ChooseYourSide: VFC = () => {
+  const [openedItems, setOpenedItems] = useState(Array.from({ length: 4 } , () => ({ left: false, right: false })))
+  const onClickHandler = (side: 'left' | 'right') => {}
 
   return (
     <div className={styles.main}>
@@ -13,9 +15,15 @@ const ChooseYourSide: VFC = () => {
       <div className={styles.main_history}>
         <div className={styles.main_history_item}>
         <ChooseYourSideItem
+            onClickHandler={onClickHandler}
+            leftOpened={openedItems[0]?.left}
+            rightOpened={openedItems[0]?.right}
             leftImgURL="/static/images/fortnite_item1.png" 
             rightImgURL="/static/images/fortnite_item1.png" />
           <ChooseYourSideItem
+            onClickHandler={onClickHandler}
+            leftOpened={openedItems[1]?.left}
+            rightOpened={openedItems[1]?.right}
             title='History'
             description='Divine Anarchy is the first attempt at an in game 
               governance NFT that will act as an experimental 
@@ -24,6 +32,9 @@ const ChooseYourSide: VFC = () => {
             leftImgURL="/static/images/fortnite_item1.png" 
             rightImgURL="/static/images/fortnite_item1.png" />
           <ChooseYourSideItem
+            onClickHandler={onClickHandler}
+            leftOpened={openedItems[2]?.left}
+            rightOpened={openedItems[2]?.right}
             title='History'
             description='Divine Anarchy is the first attempt at an in game 
               governance NFT that will act as an experimental 
@@ -32,6 +43,9 @@ const ChooseYourSide: VFC = () => {
             leftImgURL="/static/images/fortnite_item1.png" 
             rightImgURL="/static/images/fortnite_item1.png" />
           <ChooseYourSideItem 
+            onClickHandler={onClickHandler}
+            leftOpened={openedItems[3]?.left}
+            rightOpened={openedItems[3]?.right}
             title='History'
             description='Divine Anarchy is the first attempt at an in game 
               governance NFT that will act as an experimental 
