@@ -1,4 +1,5 @@
 import { ChangeEvent, useState, VFC } from 'react'
+import { useMediaQuery } from 'react-responsive'
 
 import Image from 'next/image'
 
@@ -6,13 +7,13 @@ import clsx from 'clsx'
 
 import SwitchButton from '@components/SwitchButton'
 
-// import { useMediaQuery } from 'react-responsive'
 import styles from './CodeHyperium.module.scss'
 
 
 const CodeHyperium: VFC = () => {
-  // const isMobile = useMediaQuery({ maxWidth: 767 })
+  const isMobile = useMediaQuery({ maxWidth: 767 })
   const [selectedType, setSelectedType] = useState(false)
+  const [showMore, setShowMore] = useState(true)
 
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -51,7 +52,7 @@ const CodeHyperium: VFC = () => {
                 <div className={styles.content_text_title}>
                   The <span className={styles.text_green}>Descendants</span>
                 </div>
-                <div className={styles.content_text_description}>
+                <div className={clsx(styles.content_text_description, showMore && styles.more)}>
                   Assigned to the most elite of defensive operations, 
                   The Descendants hold the title of true progeny of the 
                   ancient Samurai from millennia past. Based outside the 
@@ -61,6 +62,7 @@ const CodeHyperium: VFC = () => {
                   Descendants back. Now they want to resurrect the souls of 
                   their ancient Samurai ancestors into the new dimension of HYPERIUM.
                 </div>
+                {isMobile && <a className={styles.more_button} onClick={() => setShowMore(!showMore)}>More</a>}
               </div>
           </div>
           <div className={styles.content_borderedBlock}>

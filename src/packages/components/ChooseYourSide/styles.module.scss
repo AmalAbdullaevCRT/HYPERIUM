@@ -8,11 +8,6 @@
     transition: max-height 0.25s ease-in;
     scroll-behavior: auto;
     overflow: hidden;
-    // height: 100%;
-
-    &_item {
-      // max-height: 500px;
-    }
   }
 
   @include phone() {

@@ -1,4 +1,5 @@
-import { useState, VFC } from 'react'
+import { useLayoutEffect, useState, VFC } from 'react'
+import { useMediaQuery } from 'react-responsive'
 import { Element,scroller } from 'react-scroll'
 
 import ChooseYourSideItem from './ChooseYourSideItem'
@@ -9,9 +10,17 @@ const ChooseYourSide: VFC = () => {
     maxHeight: 420
   })
 
+  const handleMediaQueryChange = (isMobile) => {
+    setHistoryStyles({
+      maxHeight: isMobile? 320 : 420
+    })
+  }
+
+  const isMobile = useMediaQuery({ maxWidth: 767 }, undefined,  handleMediaQueryChange)
+
   const chooseYourSideHandler = (idx: number) => {
     setHistoryStyles({
-      maxHeight: historyStyles.maxHeight + 520
+      maxHeight: historyStyles.maxHeight + (isMobile? 440 : 520)
     })
     scroller.scrollTo(`choose-your-side-${idx}`, {
       duration: 1000,
@@ -19,6 +28,12 @@ const ChooseYourSide: VFC = () => {
       smooth: 'easeInOutQuart'
     })
   }
+
+  useLayoutEffect(() => {
+    setHistoryStyles({
+      maxHeight: isMobile? 320 : 420
+    })
+  }, [isMobile])
 
   return (
     <div className={styles.main}>

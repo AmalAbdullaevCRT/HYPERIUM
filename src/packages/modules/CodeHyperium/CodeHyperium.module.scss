@@ -6,6 +6,11 @@
   padding-left: 112px;
   padding-right: 112px;
 
+  @include phone() {
+    margin-top: 20px;
+    padding: 0;
+  }
+
   .title {
     font-family: $drukcyr;
     font-style: normal;
@@ -16,6 +21,11 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: $white;
+
+    @include phone() {
+      font-size: 15px;
+      line-height: 18px;
+    }
   }
 
   .description {
@@ -32,12 +42,25 @@
     padding-right: 65px;
 
     border-bottom: 1px solid $border-gray;
+
+    @include phone() {
+      font-size: 12px;
+      margin: 20px 0;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 40px;
+    }
   }
 
   .content {
     &_head {
       display: flex;
       justify-content: center;
+
+      @include phone() {
+        align-items: center;
+      }
+
       &_side {
         font-style: normal;
         font-weight: bold;
@@ -48,6 +71,10 @@
 
         &:not(:last-child) {
           margin-right: 50px;
+
+          @include phone() {
+            margin-right: 16px;
+          }
         }
 
         &.active {
@@ -58,6 +85,15 @@
           margin-right: 51px;
           display: flex;
           align-items: center;
+
+          @include phone() {
+            margin-right: 16px;
+          }
+        }
+
+        @include phone() {
+          font-size: 12px;
+          line-height: 15px;
         }
       }
     }
@@ -65,6 +101,12 @@
     &_main {
       margin-top: 56px;
       display: flex;
+
+      @include phone() {
+        flex-direction: column;
+        margin-top: 40px;
+        align-items: center;
+      }
     }
 
     &_avatar {
@@ -73,14 +115,25 @@
       width: 454px;
       height: 491px;
       padding: 10px;
+
+      @include phone() {
+        width: 253px;
+        height: 275px;
+      }
     }
 
     &_text {
-      width: 593px;
+      max-width: 593px;
       margin-left: 95px;
       display: flex;
       flex-direction: column;
       justify-content: center;
+
+      @include phone() {
+        width: auto;
+        margin-left: 0;
+        padding: 25px 27px 25px 27px;
+      }
 
       &_title {
         font-style: normal;
@@ -90,6 +143,12 @@
         text-transform: uppercase;
         margin-bottom: 32px;
         color: $white;
+
+        @include phone() {
+          font-size: 25px;
+          line-height: 31px;
+          margin-bottom: 16px;
+        }
       }
 
       &_description {
@@ -101,6 +160,32 @@
         letter-spacing: 0.04em;
         
         color: $text-gray;
+
+        @include phone {
+          font-size: 12px;
+        }
+
+        &.more {
+          @include phone() {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 6;
+            -webkit-box-orient: vertical;
+          }
+        }
+      }
+
+      .more_button {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 145%;
+        letter-spacing: 0.04em;
+        color: $green_white;
+
+        text-shadow: 0px 1px 42px $black;
+        cursor: pointer;
+        margin-top: 10px;
       }
     }
 
@@ -116,6 +201,14 @@
       color: $white;
       margin-top: 66px;
       position: relative;
+
+      @include phone {
+        padding: 18px;
+        font-size: 10px;
+        margin-top: 0;
+        margin-left: 27px;
+        margin-right: 27px;
+      }
 
       &:before,
       &:after {
