@@ -1,7 +1,6 @@
 .codeHiperium {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 51.04%, rgba(0, 0, 0, 0.42) 100%);
   background-image: url('/static/images/codeHyperium.png');
-  // filter: blur(19px);
   margin-top: 60px;
   margin-bottom: 65px;
   padding-left: 112px;
@@ -53,6 +52,12 @@
 
         &.active {
           color: $white;
+        }
+
+        &_button {
+          margin-right: 51px;
+          display: flex;
+          align-items: center;
         }
       }
     }

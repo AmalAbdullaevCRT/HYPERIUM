@@ -1,8 +1,10 @@
-import { VFC } from 'react'
+import { ChangeEvent, useState, VFC } from 'react'
 
 import Image from 'next/image'
 
 import clsx from 'clsx'
+
+import SwitchButton from '@components/SwitchButton'
 
 // import { useMediaQuery } from 'react-responsive'
 import styles from './CodeHyperium.module.scss'
@@ -10,6 +12,13 @@ import styles from './CodeHyperium.module.scss'
 
 const CodeHyperium: VFC = () => {
   // const isMobile = useMediaQuery({ maxWidth: 767 })
+  const [selectedType, setSelectedType] = useState(false)
+
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setSelectedType(event.target.checked)
+  }
+
   return (
     <div className={styles.codeHiperium} >
         <div className={styles.title}>
@@ -24,13 +33,13 @@ const CodeHyperium: VFC = () => {
         </div>
         <div className={styles.content}>
           <div className={styles.content_head}>
-            <div className={clsx(styles.content_head_side, styles.active)}>
+            <div className={clsx(styles.content_head_side, !selectedType && styles.active)}>
               The Descendants
             </div>
             <div className={styles.content_head_side_button}>
-              
+              <SwitchButton handleChange={(e) => handleChange(e)} checked={selectedType} />
             </div>
-            <div className={styles.content_head_side}>
+            <div className={clsx(styles.content_head_side, selectedType && styles.active)}>
               Ventana
             </div>
           </div>
