@@ -56,7 +56,8 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-redux": "^7.2.6",
-    "react-responsive": "^9.0.0-beta.5"
+    "react-responsive": "^9.0.0-beta.5",
+    "react-scroll": "^1.8.4"
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.14.5",

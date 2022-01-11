@@ -13,12 +13,9 @@ interface ChooseYourSideItemProps {
   number?: number
   title?: string
   description?: string
-  leftOpened: boolean,
-  rightOpened: boolean
-  onClickHandler: (side: 'left' | 'right') => void
 }
 
-const ChooseYourSideItem: VFC<ChooseYourSideItemProps> = ({ leftImgURL, rightImgURL, number, title, description, onClickHandler }) => {
+const ChooseYourSideItem: VFC<ChooseYourSideItemProps> = ({ leftImgURL, rightImgURL, number, title, description }) => {
   const [hoveredLeft, setHoveredLeft] = useState(false)
   const [hoveredRight, setHoveredRight] = useState(false)
   const [leftOpen, setLeftOpen] = useState(false)
@@ -30,7 +27,6 @@ const ChooseYourSideItem: VFC<ChooseYourSideItemProps> = ({ leftImgURL, rightImg
     setRightOpen(side === 'right')
     setHoveredLeft(false)
     setHoveredRight(false)
-    onClickHandler(side)
   }
 
   return (
