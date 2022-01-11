@@ -1,0 +1,80 @@
+.item {
+  width: 315px;
+  padding: 0px 66px 0px 0px;
+  margin-left: 52px;
+  flex-grow: 1;
+
+  @include phone() {
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-left: 0;
+
+    &:not(:first-child) {
+      padding-top: 47px;
+    }
+  }
+
+  &:not(:last-child) {
+    border-right: 1px solid #232432;
+
+    @include phone() {
+      border-right: 0;
+      border-bottom: 1px solid #232432;
+    }
+  }
+
+  &_title {
+    font-family: $drukcyr;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 27px;
+    color: $white;
+    width: 166px;
+    margin-top: 27px;
+
+    @include phone() {
+      font-size: 18px;
+      line-height: 22px;
+      text-align: center;
+      padding-left: 32px;
+      padding-right: 32px;
+      width: 100%;
+    }
+  }
+
+  &_description {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+    color: $white;
+    margin-top: 20px;
+    width: 315px;
+
+
+    @include phone() {
+      margin-bottom: 38px;
+      text-align: center;
+      padding-left: 27px;
+      padding-right: 27px;
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+
+  &_logo {
+    svg {
+      width: 74px;
+      height: 74px;
+
+      @include phone() {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}

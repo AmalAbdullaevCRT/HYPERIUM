@@ -1,0 +1,46 @@
+.our_project {
+  padding: 35px 112px 95px 112px;
+
+  @include phone() {
+    padding: 0 24px 0 24px;
+  }
+  
+
+  &_title {
+    color: $white;
+    font-family: $drukcyr;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 43px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-left: 4px solid $pink;
+    padding-left: 33px;
+
+    @include phone() {
+      font-size: 15px;
+      line-height: 18px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      padding-left: 15px;
+    }
+  }
+
+  &_content {
+    display: flex;
+    border: 1px solid #232432;
+    margin-top: 95px;
+    padding-top: 47px;
+    padding-bottom: 47px;
+
+    @include phone() {
+      margin-top: 40px;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+  }
+}

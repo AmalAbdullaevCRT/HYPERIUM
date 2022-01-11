@@ -45,10 +45,10 @@
 
     @include phone() {
       font-size: 12px;
-      margin: 20px 0;
+      margin: 20px 0 40px 0;
       padding-left: 40px;
       padding-right: 40px;
-      padding-bottom: 40px;
+      padding-bottom: 30px;
     }
   }
 
