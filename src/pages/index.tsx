@@ -4,6 +4,7 @@ import CodeHyperium from '@modules/CodeHyperium'
 import Content from '@modules/Content'
 import MainSection from '@modules/MainSection'
 import OurProject from '@modules/OurProject'
+import UploadNow from '@modules/UploadNow'
 
 import ChooseYourSide from '@components/ChooseYourSide'
 import MainSectionBlockV1 from '@components/MainSectionBlockV1'
@@ -24,6 +25,7 @@ export default function HomePage() {
         <ChooseYourSide />
         <CodeHyperium />
         <OurProject />
+        <UploadNow />
       </Content>
     </>
   )
