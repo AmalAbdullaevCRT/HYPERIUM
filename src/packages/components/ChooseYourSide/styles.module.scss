@@ -5,9 +5,35 @@
   border-radius: 80px 80px 0px 0px;
 
   &_history {
-    transition: max-height 0.25s ease-in;
-    scroll-behavior: auto;
-    overflow: hidden;
+    @keyframes inAnimation {
+      0% {
+        opacity: 0;
+        visibility: hidden;
+      }
+      100% {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  
+    @keyframes outAnimation {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    .inAnimation {
+      animation: inAnimation 250ms ease-in
+    }
+  
+    .outAnimation {
+      animation: outAnimation 270ms ease-out;
+      animation-fill-mode: forwards
+    }
   }
 
   @include phone() {
@@ -36,4 +62,5 @@
       padding-left: 15px;
     }
   }
+
 }
