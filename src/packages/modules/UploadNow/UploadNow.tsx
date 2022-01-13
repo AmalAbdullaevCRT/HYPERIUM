@@ -75,7 +75,7 @@ const UploadNow: VFC = () => {
         </div>
         <div className={clsx(styles.uploadNow_title, styles.uploadNow_title_bottom)}>
             Roadmap
-          <div className={styles.uploadNow_arrows}></div>
+          {!isMobile && <div className={styles.uploadNow_arrows}></div>}
         </div>
     </div>
   )
