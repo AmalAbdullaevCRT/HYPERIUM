@@ -35,7 +35,7 @@ const UploadNow: VFC = () => {
         <div className={styles.carousel}>
           <Swiper
             spaceBetween={20}
-            slidesPerView={7}
+            slidesPerView={5}
             loop={true}
             className={styles.carousel_block}
             freeMode={true}
@@ -55,7 +55,7 @@ const UploadNow: VFC = () => {
           </Swiper>
           <Swiper
             spaceBetween={20}
-            slidesPerView={7}
+            slidesPerView={5}
             loop={true}
             className={styles.carousel_block}
             freeMode={true}

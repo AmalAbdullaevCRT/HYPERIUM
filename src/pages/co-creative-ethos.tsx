@@ -15,7 +15,7 @@ export default function CoCreativeEthosPage() {
       <MainSection 
         imgURL="/static/images/fortnite-skin2.png" 
         mainSectionBlock={<MainSectionBlockV2 />} 
-        backgroundImgURL="/static/images/background-head.png"
+        backgroundImgURL="/static/images/background-head2.png"
       > 
       </MainSection>
       <Content>

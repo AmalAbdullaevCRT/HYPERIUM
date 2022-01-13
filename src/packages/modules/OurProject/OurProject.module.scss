@@ -1,9 +1,11 @@
 .our_project {
-  padding: 35px 112px 95px 112px;
+  padding: 95px 112px 95px 112px;
 
   @include phone() {
     padding: 0 24px 0 24px;
   }
+
+  background: rgba(0, 0, 0, 0.42);
   
 
   &_title {

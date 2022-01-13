@@ -4,6 +4,8 @@
   backdrop-filter: blur(39px);
   border-radius: 80px 80px 0px 0px;
 
+  border-bottom: 1px solid #1D2034;
+
   &_history {
     @keyframes inAnimation {
       0% {

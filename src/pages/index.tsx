@@ -16,7 +16,7 @@ export default function HomePage() {
         <title>History</title>
       </Head>
       <MainSection 
-        backgroundImgURL="/static/images/background-head2.png"
+        backgroundImgURL="/static/images/background-head.png"
         imgURL="/static/images/fortnite-skin1.png" 
         mainSectionBlock={<MainSectionBlockV1 />}
       >

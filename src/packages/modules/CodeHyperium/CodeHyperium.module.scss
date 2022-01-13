@@ -1,14 +1,13 @@
 .codeHiperium {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 51.04%, rgba(0, 0, 0, 0.42) 100%);
-  background-image: url('/static/images/codeHyperium.png');
-  margin-top: 60px;
-  margin-bottom: 65px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 51.04%, rgba(0, 0, 0, 0.42) 100%), url('/static/images/codeHyperium.png');
+  padding-top: 60px;
   padding-left: 112px;
   padding-right: 112px;
 
   @include phone() {
-    margin-top: 20px;
+    padding-top: 20px;
     padding: 0;
+    padding-bottom: 34px;
   }
 
   .title {
@@ -56,9 +55,11 @@
     &_head {
       display: flex;
       justify-content: center;
+      margin-left: 70px;
 
       @include phone() {
         align-items: center;
+        margin-left: 0;
       }
 
       &_side {
