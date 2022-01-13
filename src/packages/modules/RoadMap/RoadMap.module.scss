@@ -5,6 +5,56 @@
     background: $black_background;
   }
 
+  &_timeline {
+    width: 100%;
+    height: 4px;
+    position: relative;
+    background: linear-gradient(90deg, rgba(239, 32, 138, 0.3) -1.92%, #EF208A 53.15%, rgba(239, 32, 138, 0.3) 107.08%);
+
+    &_wrapper {
+      display: flex;
+      justify-content: space-around;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -21px;
+    }
+
+    &_dots {
+      border: 1px solid rgba(239, 32, 138, 0.44);
+      border-radius: 50%;
+      width: 46px;
+      height: 46px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      label > input[type="radio"] {
+        display: none;
+      }
+      label > input[type="radio"] + *::before {
+        content: "";
+        display: inline-block;
+        vertical-align: bottom;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        border-style: solid;
+        border-width: 3px;
+        border-color: $white;
+      }
+      label > input[type="radio"] + * {
+        color: $white;
+      }
+      label > input[type="radio"] + *::before {
+        background: $pink;
+        border-color: $white;
+        border-width: 6px;
+      }
+    }
+
+  }
+
   &_content {
     padding: 68px 150px 0 150px;
     justify-content: space-between;

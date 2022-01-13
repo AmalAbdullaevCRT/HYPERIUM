@@ -8,7 +8,28 @@ const RoadMap: VFC = () => {
   // const isMobile = useMediaQuery({ maxWidth: 767 })
   return (
     <div className={styles.roadmap} >
-        <div className={styles.roadmap_timeline}></div>
+        <div className={styles.roadmap_timeline}>
+          <div className={styles.roadmap_timeline_wrapper}>
+            <div className={styles.roadmap_timeline_dots}>
+            <label>
+                <input type="radio" name="radio-button" />
+              <span></span>
+            </label>
+            </div>
+            <div className={styles.roadmap_timeline_dots}>
+              <label>
+                  <input type="radio" name="radio-button" />
+                <span></span>
+              </label>
+            </div>
+            <div className={styles.roadmap_timeline_dots}>
+              <label>
+                  <input type="radio" name="radio-button" />
+                <span></span>
+              </label>
+            </div>
+          </div>
+        </div>
         <div className={styles.roadmap_content}>
           <div className={styles.roadmap_content_item}>
           <div className={styles.roadmap_content_item_title}>
