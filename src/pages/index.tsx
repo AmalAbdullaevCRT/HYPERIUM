@@ -3,6 +3,7 @@ import Head from 'next/head'
 import ChooseYourSide from '@modules/ChooseYourSide'
 import CodeHyperium from '@modules/CodeHyperium'
 import Content from '@modules/Content'
+import FAQ from '@modules/FAQ'
 import MainSection from '@modules/MainSection'
 import MainSectionBlockV1 from '@modules/MainSectionBlockV1'
 import OurProject from '@modules/OurProject'
@@ -27,6 +28,7 @@ export default function HomePage() {
         <OurProject />
         <UploadNow />
         <Team />
+        <FAQ />
       </Content>
     </>
   )

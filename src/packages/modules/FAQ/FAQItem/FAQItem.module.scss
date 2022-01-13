@@ -1,0 +1,77 @@
+.item {
+  background: #161721;
+  background: rgba(239, 32, 138, 0.12);
+  padding: 25px 34px 25px 34px;
+  border-left: 3px solid $pink;
+  width: 600px;
+  margin-bottom: 15px;
+
+  @include phone() {
+    width: 266px;
+    padding: 16px 22px 16px 22px;
+  }
+
+  &_title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include phone() {
+      font-size: 12px;
+    }
+
+    .svg {
+      cursor: pointer;
+      transition: all .35s;
+      &.active {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &_content {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: $text_gray;
+    margin-top: 33px;
+
+    @keyframes inAnimation {
+      0% {
+        opacity: 0;
+        visibility: hidden;
+      }
+      100% {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    @keyframes outAnimation {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    &.inAnimation {
+      animation: inAnimation 250ms ease-in
+    }
+  
+    &.outAnimation {
+      animation: outAnimation 270ms ease-out;
+      animation-fill-mode: forwards
+    }
+  }
+}
