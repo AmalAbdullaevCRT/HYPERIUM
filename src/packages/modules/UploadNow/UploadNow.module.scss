@@ -1,7 +1,5 @@
 .uploadNow {
-
   padding: 0 112px 95px 112px;
-  background: linear-gradient(180deg, rgba(8, 10, 23, 0) 61.37%, $menu_color 100%);
 
   @include phone() {
     padding: 60px 27px 0 27px;
@@ -73,6 +71,36 @@
     margin-top: 86px;
     @include phone() {
       margin-top: 33px;
+    }
+    user-select: none; /* Google Chrome, Opera Next, Safari */
+    
+    &_block { 
+      &:last-child {
+        margin-top: 20px;
+
+        // &::after {
+        //   content: " ";
+        //   position: absolute;
+        //   top: 0;
+        //   background: linear-gradient(180deg, rgba(8, 10, 23, 0) 61.37%, #080A17 100%);
+        //   z-index: 10;
+        //   width: 100%;
+        //   height: 100%;
+        // }
+      }
+    }
+
+    &_item {
+      background: #1E2130;
+      opacity: 0.3;
+
+      div {
+        border-radius: 19px;
+      }
+
+      &.active {
+        opacity: 1;
+      }
     }
   }
 }

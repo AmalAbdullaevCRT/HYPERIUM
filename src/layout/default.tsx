@@ -2,7 +2,9 @@ import { FC } from 'react'
 
 import Head from 'next/head'
 
+import Footer from '@modules/Footer'
 import Header from '@modules/Header'
+import Main from '@modules/Main'
 
 export const DefaultLayout: FC = ({ children }) => {
   return (
@@ -14,8 +16,10 @@ export const DefaultLayout: FC = ({ children }) => {
         />
       </Head>
       <Header />
-      {children}
-      {/* <Footer /> */}
+      <Main>
+        {children}
+      </Main>
+      <Footer />
     </>
   )
 }

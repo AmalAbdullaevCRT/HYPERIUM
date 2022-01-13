@@ -7,6 +7,7 @@
   z-index: 100;
   position: relative;
   $header: &;
+  flex: 0 0 auto;
 
   @include phone() {
     padding: 25px 35px;
