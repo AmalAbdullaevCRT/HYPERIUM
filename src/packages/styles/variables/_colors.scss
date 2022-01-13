@@ -10,6 +10,7 @@ $border-gray: #373D52;
 $text-silent: #4C4F5F;
 $border-gray2: #3B3F67;
 $border-line: #232432;
+$black-background: rgba(0, 0, 0, 0.42);
 
 $colorsList: (
   "text-gray": $text-gray,
@@ -24,4 +25,5 @@ $colorsList: (
   "text-silent": $text-silent,
   "border-gray2": $border-gray2,
   "border-line:": $border-line,
+  "black-background": $black-background,
 );

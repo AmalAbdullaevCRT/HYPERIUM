@@ -1,8 +1,12 @@
 .codeHiperium {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 51.04%, rgba(0, 0, 0, 0.42) 100%), url('/static/images/codeHyperium.png');
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 51.04%, $black-background 100%), url('/static/images/codeHyperium.png');
   padding-top: 60px;
   padding-left: 112px;
   padding-right: 112px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   @include phone() {
     padding-top: 20px;

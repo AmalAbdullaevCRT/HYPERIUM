@@ -1,5 +1,6 @@
 .uploadNow {
   padding: 0 112px 95px 112px;
+  background: $black-background;
 
   @include phone() {
     padding: 60px 27px 0 27px;
