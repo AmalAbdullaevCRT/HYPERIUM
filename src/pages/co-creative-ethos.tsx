@@ -1,10 +1,12 @@
 import Head from 'next/head'
 
+import CoCreativeEthos from '@modules/CoCreativeEthos'
+import Content from '@modules/Content'
 import MainSection from '@modules/MainSection'
 
 import MainSectionBlockV2 from '@components/MainSectionBlockV2'
 
-export default function CoCreativeEthos() {
+export default function CoCreativeEthosPage() {
   return (
     <>
       <Head>
@@ -16,6 +18,9 @@ export default function CoCreativeEthos() {
         backgroundImgURL="/static/images/background-head.png"
       > 
       </MainSection>
+      <Content>
+        <CoCreativeEthos />
+      </Content>
     </>
   )
 }

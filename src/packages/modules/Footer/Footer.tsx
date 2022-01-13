@@ -29,17 +29,19 @@ const Footer: VFC = () => {
     return () => {
       router.events.off('routeChangeStart', handleRouteChange)
     }
-  }, [])
+  }, [router.events])
 
 
   const handleCheck = (event) => {
+    event.stopPropagation()
+    console.log(event)
     setMenuIsOpen(event.target.checked)
   }
 
   return (
     <footer className={clsx(styles.footer, styles[menuIsOpen? 'black': 'inherit'])}>
-        <input id="burger" checked={menuIsOpen} type="checkbox" className={styles.footer_hamburger_input} onChange={handleCheck} />
-        <label className={styles.footer_hamburger} htmlFor="burger">
+        <input id="burger2" checked={menuIsOpen} type="checkbox" className={styles.footer_hamburger_input} onChange={handleCheck} />
+        <label className={styles.footer_hamburger} htmlFor="burger2" >
           <div className={clsx(styles.top,styles.item)}></div>
           <div className={clsx(styles.meat,styles.item)}></div>
           <div className={clsx(styles.bottom,styles.item)}></div>

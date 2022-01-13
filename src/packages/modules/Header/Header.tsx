@@ -29,7 +29,7 @@ const Header: VFC = () => {
     return () => {
       router.events.off('routeChangeStart', handleRouteChange)
     }
-  }, [])
+  }, [router.events])
 
 
   const handleCheck = (event) => {
