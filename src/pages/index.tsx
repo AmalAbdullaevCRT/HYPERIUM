@@ -1,13 +1,13 @@
 import Head from 'next/head'
 
+import ChooseYourSide from '@modules/ChooseYourSide'
 import CodeHyperium from '@modules/CodeHyperium'
 import Content from '@modules/Content'
 import MainSection from '@modules/MainSection'
+import MainSectionBlockV1 from '@modules/MainSectionBlockV1'
 import OurProject from '@modules/OurProject'
+import Team from '@modules/Team'
 import UploadNow from '@modules/UploadNow'
-
-import ChooseYourSide from '@components/ChooseYourSide'
-import MainSectionBlockV1 from '@components/MainSectionBlockV1'
 
 export default function HomePage() {
   return (
@@ -26,6 +26,7 @@ export default function HomePage() {
         <CodeHyperium />
         <OurProject />
         <UploadNow />
+        <Team />
       </Content>
     </>
   )

@@ -3,8 +3,7 @@ import Head from 'next/head'
 import CoCreativeEthos from '@modules/CoCreativeEthos'
 import Content from '@modules/Content'
 import MainSection from '@modules/MainSection'
-
-import MainSectionBlockV2 from '@components/MainSectionBlockV2'
+import MainSectionBlockV2 from '@modules/MainSectionBlockV2'
 
 export default function CoCreativeEthosPage() {
   return (
