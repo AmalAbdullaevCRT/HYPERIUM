@@ -26,6 +26,19 @@
       align-items: center;
       padding-left: 15px;
     }
+
+    &_bottom {
+      margin-top: 95px;
+      border-left: 4px solid $pink;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &_arrows {
+    width: 126px;
+    height: 61px;
+    border: 1px solid $pink;
   }
 
   &_description {

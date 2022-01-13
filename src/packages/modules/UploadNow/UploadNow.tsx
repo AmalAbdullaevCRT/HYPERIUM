@@ -62,20 +62,20 @@ const UploadNow: VFC = () => {
             pagination={{
               "clickable": true
             }}
-            autoplay={{
-              "delay": 1000,
-              "disableOnInteraction": false
-            }}
             grabCursor={true}
           >
             {[1,2,3,4,5,6,7,8,9,10].map((i) => (
             <SwiperSlide 
               key={i} 
-              className={clsx(styles.carousel_item)}
+              className={clsx(styles.carousel_item, isActive === i && styles.active)} 
             >
               <Image alt='avatar' src='/static/images/person.png' width={207} height={273}></Image>
             </SwiperSlide>))}
           </Swiper>
+        </div>
+        <div className={clsx(styles.uploadNow_title, styles.uploadNow_title_bottom)}>
+            Roadmap
+          <div className={styles.uploadNow_arrows}></div>
         </div>
     </div>
   )

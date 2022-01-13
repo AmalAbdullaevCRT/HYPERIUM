@@ -1,0 +1,46 @@
+.roadmap {
+  background: linear-gradient(180deg, rgba(239, 32, 138, 0.1) 0%, rgba(3, 3, 6, 0) 100%);
+  &_content {
+    padding: 68px 150px 0 150px;
+    justify-content: space-between;
+    display: flex;
+
+    &_item {
+      width: 278px;
+      &_title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 28px;
+        color: $pink;
+        margin-bottom: 25px;
+      }
+      &_description {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 23px;
+        color: $text_gray;
+        margin-bottom: 22px;
+      }
+      &_list {
+        &_title {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 25px;
+          color: $white;
+          margin-bottom: 17px;
+        }
+        &_content {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 19px;
+          line-height: 130%;
+          color: $text_gray;
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+}

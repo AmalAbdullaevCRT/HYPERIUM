@@ -7,6 +7,7 @@ import FAQ from '@modules/FAQ'
 import MainSection from '@modules/MainSection'
 import MainSectionBlockV1 from '@modules/MainSectionBlockV1'
 import OurProject from '@modules/OurProject'
+import RoadMap from '@modules/RoadMap'
 import Team from '@modules/Team'
 import UploadNow from '@modules/UploadNow'
 
@@ -27,6 +28,7 @@ export default function HomePage() {
         <CodeHyperium />
         <OurProject />
         <UploadNow />
+        <RoadMap />
         <Team />
         <FAQ />
       </Content>
