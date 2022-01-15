@@ -2,6 +2,7 @@ import { VFC } from 'react'
 
 // import { useMediaQuery } from 'react-responsive'
 import styles from './RoadMap.module.scss'
+import { one, three, two } from './svg'
 
 
 const RoadMap: VFC = () => {
@@ -10,23 +11,32 @@ const RoadMap: VFC = () => {
     <div className={styles.roadmap} >
         <div className={styles.roadmap_timeline}>
           <div className={styles.roadmap_timeline_wrapper}>
-            <div className={styles.roadmap_timeline_dots}>
-            <label>
-                <input type="radio" name="radio-button" />
-              <span></span>
-            </label>
-            </div>
-            <div className={styles.roadmap_timeline_dots}>
+            <div className={styles.roadmap_timeline_dots_wrapper}>
+                { one }
+              <div className={styles.roadmap_timeline_dots}>
               <label>
                   <input type="radio" name="radio-button" />
                 <span></span>
               </label>
+              </div>
             </div>
-            <div className={styles.roadmap_timeline_dots}>
-              <label>
-                  <input type="radio" name="radio-button" />
-                <span></span>
-              </label>
+            <div className={styles.roadmap_timeline_dots_wrapper}>
+              { two }
+              <div className={styles.roadmap_timeline_dots}>
+                <label>
+                    <input type="radio" name="radio-button" />
+                  <span></span>
+                </label>
+              </div>
+            </div>
+            <div className={styles.roadmap_timeline_dots_wrapper}>
+              { three }
+              <div className={styles.roadmap_timeline_dots}>
+                <label>
+                    <input type="radio" name="radio-button" />
+                  <span></span>
+                </label>
+              </div>
             </div>
           </div>
         </div>

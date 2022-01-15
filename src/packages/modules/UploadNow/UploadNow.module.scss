@@ -17,6 +17,7 @@
     text-transform: uppercase;
     border-left: 4px solid $green_white;
     padding-left: 33px;
+    margin-bottom: 75px;
 
     @include phone() {
       font-size: 15px;

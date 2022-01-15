@@ -17,7 +17,7 @@
       position: absolute;
       left: 0;
       right: 0;
-      top: -21px;
+      bottom: -20px;
     }
 
     &_dots {
@@ -50,6 +50,13 @@
         background: $pink;
         border-color: $white;
         border-width: 6px;
+      }
+
+      &_wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
       }
     }
 
