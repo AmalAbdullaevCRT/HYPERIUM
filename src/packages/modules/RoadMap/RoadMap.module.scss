@@ -3,6 +3,7 @@
 
   @include phone() {
     background: $black_background;
+    padding-top: 46px;
   }
 
   &_timeline {
@@ -10,6 +11,10 @@
     height: 4px;
     position: relative;
     background: linear-gradient(90deg, rgba(239, 32, 138, 0.3) -1.92%, #EF208A 53.15%, rgba(239, 32, 138, 0.3) 107.08%);
+
+    @include phone() {
+      display: none;
+    }
 
     &_wrapper {
       display: flex;
@@ -69,13 +74,53 @@
 
     @include phone() {
       flex-direction: column;
-      padding: 46px 60px 0 60px;
+      padding: 0px 23px 0px 10px;
+    }
+
+    &_wrapper {
+      @include phone() {
+        display: flex;
+      }
+      display: none;
+    }
+
+    &_mobile_timeline {
+      margin-right: 13px;
+      padding: 12px;
+
+      &_item {
+        display: none;
+        @include phone() {
+          font-family: $drukcyr;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 15px;
+        
+          text-align: center;
+          
+          color: $white;
+
+          background: #212121;
+          box-shadow: 0px 1px 21px rgba(0, 0, 0, 0.93);
+          width: 39px;
+          height: 39px;   
+          border-radius: 50%;
+          display: flex;  
+          justify-content: center;
+          align-items: center;
+          margin-right: 13px;
+          padding: 12px;
+        }
+      }
     }
 
     &_item {
       width: 278px;
       @include phone() {
-        width: 236px;
+        width: 280px;
+        display: flex;
+        flex-direction: row;
       }
       &_title {
         font-style: normal;
