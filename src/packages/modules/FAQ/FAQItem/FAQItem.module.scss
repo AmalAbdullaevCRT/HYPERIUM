@@ -1,10 +1,9 @@
 .item {
-  background: #161721;
-  background: rgba(239, 32, 138, 0.12);
   padding: 25px 34px 25px 34px;
   border-left: 3px solid $pink;
   width: 600px;
   margin-bottom: 15px;
+  background: linear-gradient(to right, rgba(239, 32, 138, 0.12) ,  #161721);
 
   @include phone() {
     width: 266px;
