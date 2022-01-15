@@ -36,6 +36,10 @@ const Header: VFC = () => {
     setMenuIsOpen(event.target.checked)
   }
 
+  const isActiveClass = (path: string) => {
+    return router.pathname === path ? styles.active : null
+  }
+
   return (
     <header className={clsx(styles.header, styles[menuIsOpen? 'black': 'inherit'])}>
         <input id="burger" checked={menuIsOpen} type="checkbox" className={styles.header_hamburger_input} onChange={handleCheck} />
@@ -50,20 +54,20 @@ const Header: VFC = () => {
           </a>
         </Link>
         <div className={styles.header_menu}>
-          <Link href="/" passHref >
-            <a
-              onMouseMove={() => cursorChangeHandler('hovered')}
-              onMouseLeave={() => cursorChangeHandler('')}
-              className={styles.header_menu_item}>
-              {home}
-              Home
-            </a>
-          </Link>
+            <Link href="/" passHref >
+              <a
+                onMouseMove={() => cursorChangeHandler('hovered')}
+                onMouseLeave={() => cursorChangeHandler('')}
+                className={clsx(styles.header_menu_item, isActiveClass('/'))}>
+                {home}
+                Home
+              </a>
+            </Link>
           <Link href="/co-creative-ethos" passHref >
             <a
               onMouseMove={() => cursorChangeHandler('hovered')}
               onMouseLeave={() => cursorChangeHandler('')}
-              className={styles.header_menu_item}>
+              className={clsx(styles.header_menu_item, isActiveClass('/co-creative-ethos'))}>
               co-creative ethos
             </a>
           </Link>
@@ -71,7 +75,7 @@ const Header: VFC = () => {
             <a
               onMouseMove={() => cursorChangeHandler('hovered')}
               onMouseLeave={() => cursorChangeHandler('')}
-              className={styles.header_menu_item}>
+              className={clsx(styles.header_menu_item, isActiveClass('/factions'))}>
               factions
             </a>
           </Link>
@@ -79,7 +83,7 @@ const Header: VFC = () => {
             <a
               onMouseMove={() => cursorChangeHandler('hovered')}
               onMouseLeave={() => cursorChangeHandler('')}
-              className={styles.header_menu_item}>
+              className={clsx(styles.header_menu_item, isActiveClass('/team'))}>
                 team
             </a>
           </Link>
@@ -87,7 +91,7 @@ const Header: VFC = () => {
             <a
               onMouseMove={() => cursorChangeHandler('hovered')}
               onMouseLeave={() => cursorChangeHandler('')}
-              className={styles.header_menu_item}>
+              className={clsx(styles.header_menu_item, isActiveClass('/roadmap'))}>
               roadmap
             </a>
           </Link>
@@ -95,7 +99,7 @@ const Header: VFC = () => {
             <a
               onMouseMove={() => cursorChangeHandler('hovered')}
               onMouseLeave={() => cursorChangeHandler('')}
-              className={styles.header_menu_item}>
+              className={clsx(styles.header_menu_item, isActiveClass('/f.a.q'))}>
               f.a.q
             </a>
           </Link>

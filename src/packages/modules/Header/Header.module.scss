@@ -135,6 +135,13 @@
       text-decoration: none;
       text-transform: uppercase;
 
+      &.active {
+        color: $pink;
+        @include phone () {
+          color: inherit;
+        }
+      }
+
       @include scale((
         margin-right: 50px,
       ));

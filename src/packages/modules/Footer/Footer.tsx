@@ -38,6 +38,10 @@ const Footer: VFC = () => {
     setMenuIsOpen(event.target.checked)
   }
 
+  const isActiveClass = (path: string) => {
+    return router.pathname === path ? styles.active : null
+  }
+
   return (
     <footer className={clsx(styles.footer, styles[menuIsOpen? 'black': 'inherit'])}>
         <input id="burger2" checked={menuIsOpen} type="checkbox" className={styles.footer_hamburger_input} onChange={handleCheck} />
@@ -56,7 +60,7 @@ const Footer: VFC = () => {
             <a
               onMouseMove={() => cursorChangeHandler('hovered')}
               onMouseLeave={() => cursorChangeHandler('')}
-              className={styles.footer_menu_item}>
+              className={clsx(styles.footer_menu_item, isActiveClass('/'))}>
               {/* {home} */}
               Home
             </a>
@@ -65,7 +69,7 @@ const Footer: VFC = () => {
             <a
               onMouseMove={() => cursorChangeHandler('hovered')}
               onMouseLeave={() => cursorChangeHandler('')}
-              className={styles.footer_menu_item}>
+              className={clsx(styles.footer_menu_item, isActiveClass('/co-creative-ethos'))}>
               co-creative ethos
             </a>
           </Link>
@@ -73,7 +77,7 @@ const Footer: VFC = () => {
             <a
               onMouseMove={() => cursorChangeHandler('hovered')}
               onMouseLeave={() => cursorChangeHandler('')}
-              className={styles.footer_menu_item}>
+              className={clsx(styles.footer_menu_item, isActiveClass('/factions'))}>
               factions
             </a>
           </Link>
@@ -81,7 +85,7 @@ const Footer: VFC = () => {
             <a
               onMouseMove={() => cursorChangeHandler('hovered')}
               onMouseLeave={() => cursorChangeHandler('')}
-              className={styles.footer_menu_item}>
+              className={clsx(styles.footer_menu_item, isActiveClass('/team'))}>
                 team
             </a>
           </Link>
@@ -89,7 +93,7 @@ const Footer: VFC = () => {
             <a
               onMouseMove={() => cursorChangeHandler('hovered')}
               onMouseLeave={() => cursorChangeHandler('')}
-              className={styles.footer_menu_item}>
+              className={clsx(styles.footer_menu_item, isActiveClass('/roadmap'))}>
               roadmap
             </a>
           </Link>
@@ -97,7 +101,7 @@ const Footer: VFC = () => {
             <a
               onMouseMove={() => cursorChangeHandler('hovered')}
               onMouseLeave={() => cursorChangeHandler('')}
-              className={styles.footer_menu_item}>
+              className={clsx(styles.footer_menu_item, isActiveClass('/f.a.q'))}>
               f.a.q
             </a>
           </Link>
