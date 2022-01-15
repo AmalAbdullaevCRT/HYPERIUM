@@ -19,8 +19,13 @@ SwiperCore.use([FreeMode,Pagination])
 const UploadNow: VFC = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 })
   const [showMore, setShowMore] = useState(true)
-  const [isActive, setIsActive] = useState(4)
-  const [isActive2, setIsActive2] = useState(4)
+  const [isActiveCard, setIsActiveCard] = useState(4)
+  const [isActiveRow, setIsActiveRow] = useState('top')
+
+  const onClickHandler = (id: number, row: 'top' | 'bottom') => {
+    setIsActiveCard(id)
+    setIsActiveRow(row)
+  }
 
   return (
     <div className={styles.uploadNow} >
@@ -49,7 +54,7 @@ const UploadNow: VFC = () => {
               },
             }}
             loop={true}
-            className={styles.carousel_block}
+            className={clsx(styles.carousel_block, isActiveRow !== 'top' && styles.active_top)}
             freeMode={true}
             pagination={{
               "clickable": true
@@ -59,8 +64,8 @@ const UploadNow: VFC = () => {
             {[1,2,3,4,5,6,7,8,9,10].map((i) => (
             <SwiperSlide 
               key={i} 
-              className={clsx(styles.carousel_item, isActive === i && styles.active)} 
-              onClick={() => setIsActive(i)}
+              className={clsx(styles.carousel_item, isActiveRow === 'top' && isActiveCard === i && styles.active)} 
+              onClick={() => onClickHandler(i, 'top')}
             >
               <Image alt='avatar' src='/static/images/person.png' width={207} height={273}></Image>
             </SwiperSlide>))}
@@ -81,7 +86,7 @@ const UploadNow: VFC = () => {
               },
             }}
             loop={true}
-            className={styles.carousel_block}
+            className={clsx(styles.carousel_block, isActiveRow !== 'bottom' && styles.active_bottom)}
             freeMode={true}
             pagination={{
               "clickable": true
@@ -91,8 +96,8 @@ const UploadNow: VFC = () => {
             {[1,2,3,4,5,6,7,8,9,10].map((i) => (
             <SwiperSlide 
               key={i} 
-              className={clsx(styles.carousel_item, isActive2 === i && styles.active)} 
-              onClick={() => setIsActive2(i)}
+              className={clsx(styles.carousel_item, isActiveRow === 'bottom' && isActiveCard === i && styles.active)} 
+              onClick={() => onClickHandler(i, 'bottom')}
             >
               <Image alt='avatar' src='/static/images/person.png' width={207} height={273}></Image>
             </SwiperSlide>))}

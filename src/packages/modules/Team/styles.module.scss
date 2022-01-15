@@ -1,12 +1,12 @@
 .team {
   padding: 95px 112px 95px 112px;
-  background: linear-gradient(
-    180deg
-    , rgba(3, 3, 6, 0) 0, $black-background 100%);
+  // background: linear-gradient(
+  //   180deg
+  //   , rgba(3, 3, 6, 0) 0, $black-background 100%);
 
   @include phone() {
     padding: 0 0px 0 30px;
-    background: rgba(0, 0, 0, 0.42);
+    // background: rgba(0, 0, 0, 0.42);
     padding-top: 55px;
   }
 
