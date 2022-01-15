@@ -6,6 +6,10 @@
 
   border-bottom: 1px solid #1D2034;
 
+  @include phone() {
+    border-bottom: 0;
+  }
+
   &_history {
     @keyframes inAnimation {
       0% {

@@ -2,7 +2,7 @@
   background: linear-gradient(180deg, rgba(239, 32, 138, 0.1) 0%, rgba(3, 3, 6, 0) 100%);
 
   @include phone() {
-    background: $black_background;
+    background: inherit; 
     padding-top: 46px;
   }
 

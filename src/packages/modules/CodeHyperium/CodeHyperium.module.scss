@@ -11,7 +11,8 @@
 
   @include phone() {
     padding-top: 20px;
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
     padding-bottom: 34px;
   }
 

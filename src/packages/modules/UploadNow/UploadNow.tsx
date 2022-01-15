@@ -1,4 +1,4 @@
-import { useState, VFC } from 'react'
+import { useEffect, useState, VFC } from 'react'
 import { useMediaQuery } from 'react-responsive'
 
 import Image from 'next/image'
@@ -19,13 +19,17 @@ SwiperCore.use([FreeMode,Pagination])
 const UploadNow: VFC = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 })
   const [showMore, setShowMore] = useState(true)
-  const [isActiveCard, setIsActiveCard] = useState(4)
+  const [isActiveCard, setIsActiveCard] = useState(0)
   const [isActiveRow, setIsActiveRow] = useState('top')
 
   const onClickHandler = (id: number, row: 'top' | 'bottom') => {
     setIsActiveCard(id)
     setIsActiveRow(row)
   }
+
+  useEffect(() => {
+    setIsActiveCard(isMobile ? 2 : 4)
+  }, [isMobile])
 
   return (
     <div className={styles.uploadNow} >

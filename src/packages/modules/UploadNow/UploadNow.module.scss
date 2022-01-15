@@ -111,6 +111,12 @@
               background: linear-gradient(to bottom, #111720 10%, rgba(0, 0, 0, 0));
               z-index: 100;
             }
+
+            @include phone() {
+              &::before {
+                content: none;
+              }
+            }
           }
         }
 
@@ -123,6 +129,13 @@
               height: 100%;
               background: linear-gradient(to top, #111720 -10%, rgba(0, 0, 0, 0));
               z-index: 100;
+            }
+
+
+            @include phone() {
+              &::before {
+                content: none;
+              }
             }
           }
         }
