@@ -5,7 +5,6 @@ import Image from 'next/image'
 
 import clsx from 'clsx'
 import SwiperCore, {
-Autoplay,
   FreeMode,Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -15,12 +14,13 @@ import 'swiper/css'
 // import { useMediaQuery } from 'react-responsive'
 import styles from './UploadNow.module.scss'
 
-SwiperCore.use([Autoplay, FreeMode,Pagination])
+SwiperCore.use([FreeMode,Pagination])
 
 const UploadNow: VFC = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 })
   const [showMore, setShowMore] = useState(true)
   const [isActive, setIsActive] = useState(4)
+  const [isActive2, setIsActive2] = useState(4)
 
   return (
     <div className={styles.uploadNow} >
@@ -34,8 +34,20 @@ const UploadNow: VFC = () => {
         {isMobile && <a className={styles.more_button} onClick={() => setShowMore(!showMore)}>More</a>}
         <div className={styles.carousel}>
           <Swiper
-            spaceBetween={20}
-            slidesPerView={5}
+            breakpoints={{
+              "320": {
+                "slidesPerView": 2,
+                "spaceBetween": 15
+              },
+              "768": {
+                "slidesPerView": 4,
+                "spaceBetween": 15
+              },
+              "1024": {
+                "slidesPerView": 8,
+                "spaceBetween": 15
+              },
+            }}
             loop={true}
             className={styles.carousel_block}
             freeMode={true}
@@ -54,8 +66,20 @@ const UploadNow: VFC = () => {
             </SwiperSlide>))}
           </Swiper>
           <Swiper
-            spaceBetween={20}
-            slidesPerView={5}
+            breakpoints={{
+              "320": {
+                "slidesPerView": 2,
+                "spaceBetween": 15
+              },
+              "768": {
+                "slidesPerView": 4,
+                "spaceBetween": 15
+              },
+              "1024": {
+                "slidesPerView": 8,
+                "spaceBetween": 15
+              },
+            }}
             loop={true}
             className={styles.carousel_block}
             freeMode={true}
@@ -67,7 +91,8 @@ const UploadNow: VFC = () => {
             {[1,2,3,4,5,6,7,8,9,10].map((i) => (
             <SwiperSlide 
               key={i} 
-              className={clsx(styles.carousel_item, isActive === i && styles.active)} 
+              className={clsx(styles.carousel_item, isActive2 === i && styles.active)} 
+              onClick={() => setIsActive2(i)}
             >
               <Image alt='avatar' src='/static/images/person.png' width={207} height={273}></Image>
             </SwiperSlide>))}

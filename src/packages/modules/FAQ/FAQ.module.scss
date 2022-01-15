@@ -4,7 +4,7 @@
   height: 500px;
 
   @include phone() {
-    padding: 0 0px 0 30px;
+    padding: 54px 0px 0 30px;
     height: auto;
     padding-bottom: 45px;
   }

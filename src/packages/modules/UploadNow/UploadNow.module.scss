@@ -1,9 +1,10 @@
 .uploadNow {
-  padding: 0 112px 95px 112px;
   background: $black-background;
+  padding-bottom: 160px;
 
   @include phone() {
-    padding: 60px 27px 0 27px;
+    padding-top: 60px;
+    padding-bottom: 0;
   }
 
   &_title {
@@ -18,6 +19,7 @@
     border-left: 4px solid $green_white;
     padding-left: 33px;
     margin-bottom: 75px;
+    margin: 0 112px 43px 112px;
 
     @include phone() {
       font-size: 15px;
@@ -27,6 +29,7 @@
       align-items: center;
       padding-left: 15px;
       margin-bottom: 0;
+      margin: 0 27px 0 27px;
     }
 
     &_bottom {
@@ -34,6 +37,10 @@
       border-left: 4px solid $pink;
       display: flex;
       justify-content: space-between;
+
+      @include phone() {
+        margin-top: 60px;
+      }
     }
   }
 
@@ -52,9 +59,10 @@
     margin-top: 43px;
 
     letter-spacing: 0.04em;
+    margin: 0 112px 86px 112px;
 
     @include phone() {
-      margin-top: 24px;
+      margin: 24px 27px 0px 27px;
       font-size: 12px;
     }
 
@@ -75,6 +83,7 @@
     line-height: 145%;
     letter-spacing: 0.04em;
     color: $green_white;
+    margin: 24px 27px 0px 27px;
 
     display: block;
 
@@ -88,29 +97,22 @@
     @include phone() {
       margin-top: 33px;
     }
-    user-select: none; /* Google Chrome, Opera Next, Safari */
+    user-select: none;
     
     &_block { 
-      height: 273px;
       &:last-child {
         margin-top: 20px;
 
-        &::after {
-          content: " ";
-          position: absolute;
-          bottom: 0;
-          background: linear-gradient(180deg, rgba(8, 10, 23, 0) 61.37%, #080A17 100%);
-          z-index: 10;
-          width: 100%;
-          height: 273px;
+        @include phone() {
+          margin-top: 10px;
         }
       }
     }
 
     &_item {
-      background: #1E2130;
       opacity: 0.3;
       border-radius: 19px;
+      min-width: 215px;
 
       div {
         border-radius: 19px;
