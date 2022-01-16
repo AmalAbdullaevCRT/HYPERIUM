@@ -6,6 +6,29 @@
     padding-bottom: 0;
   }
 
+  &_arrows {
+    display: flex;
+    justify-content: space-around;
+    &_left {
+      display: flex;
+      border-right: 1px solid $pink;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    &_right {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+
   &_title {
     color: $white;
     font-family: $drukcyr;
@@ -19,6 +42,7 @@
     padding-left: 33px;
     margin-bottom: 75px;
     margin: 0 112px 43px 112px;
+    user-select: none;
 
     @include phone() {
       font-size: 15px;
