@@ -2,8 +2,12 @@
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 51.04%, $main-color 100%), url('/static/images/codeHyperium.png');
   // background-image: url('/static/images/codeHyperium.png');
   padding-top: 60px;
-  padding-left: 112px;
-  padding-right: 112px;
+  // padding-left: 112px;
+  // padding-right: 112px;
+
+  &_wrapper {
+    @include content;
+  }
 
   background-position: center;
   background-repeat: no-repeat;
@@ -58,10 +62,10 @@
   }
 
   .content {
+
     &_head {
       display: flex;
       justify-content: center;
-      margin-left: 70px;
 
       @include phone() {
         align-items: center;

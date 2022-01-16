@@ -6,6 +6,11 @@
     padding-bottom: 0;
   }
 
+  &_wrapper {
+
+    @include content;
+  }
+
   &_arrows {
     display: flex;
     justify-content: space-around;
@@ -39,10 +44,12 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     border-left: 4px solid $green_white;
-    padding-left: 33px;
     margin-bottom: 75px;
-    margin: 0 112px 43px 112px;
+    margin: 0 0px 43px 0px;
     user-select: none;
+
+    @include content;
+    padding-left: 33px;
 
     @include phone() {
       font-size: 15px;
@@ -82,7 +89,11 @@
     margin-top: 43px;
 
     letter-spacing: 0.04em;
-    margin: 0 112px 86px 112px;
+    margin: 0 0px 86px 0px;
+
+    @include content;
+    padding-left: 0;
+    padding-right: 0;
 
     @include phone() {
       margin: 24px 27px 0px 27px;

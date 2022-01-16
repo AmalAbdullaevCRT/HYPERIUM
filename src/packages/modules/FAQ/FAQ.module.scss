@@ -1,7 +1,8 @@
 .FAQ {
-  padding: 20px 112px 95px 112px;
+  padding: 20px 0px 95px 0px;
   height: 500px;
 
+  @include content;
   @include phone() {
     padding: 54px 0px 0 30px;
     height: auto;

@@ -3,11 +3,14 @@
   width: 100%;
   align-items: center;
   padding-top: 42px;
-  padding-left: 135px;
   z-index: 100;
   position: relative;
   $header: &;
   flex: 0 0 auto;
+
+  @include content;
+  max-width: none;
+  justify-content: center;
 
   @include phone() {
     padding: 25px 35px;

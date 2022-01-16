@@ -22,6 +22,7 @@ const CodeHyperium: VFC = () => {
 
   return (
     <div className={styles.codeHiperium} >
+      <div className={styles.codeHiperium_wrapper}>
         <div className={styles.title}>
           <span className={styles.text_green}>CODE HYPERIUM</span> is
         </div>
@@ -70,6 +71,7 @@ const CodeHyperium: VFC = () => {
             artists, writers, musicians, and coders to show off their skills.
           </div>
         </div>
+      </div>
     </div>
   )
 }
