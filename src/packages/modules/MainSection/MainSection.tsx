@@ -20,27 +20,29 @@ const MainSection: VFC<MainSectionProps> = ({ children, imgURL, mainSectionBlock
     }}>
         {children}
         <div className={styles.main_section_wrapper}>
-          <div className={styles.main_section_block}>
-            {mainSectionBlock}
-            <div className={styles.main_section_button}>
-              {!isMobile && (<Button
-                size="large"
-                onClick={() => {}}>
-                Fractions
-              </Button>)}
-            </div>
-          </div>
-          <div className={styles.main_section_img_block}   style={{
-              backgroundImage: `url(${imgURL})`
-            }}>
+          <div className={styles.main_section_content}>
+            <div className={styles.main_section_block}>
+              {mainSectionBlock}
               <div className={styles.main_section_button}>
-                {isMobile && (<Button
-                  size="medium"
+                {!isMobile && (<Button
+                  size="large"
                   onClick={() => {}}>
                   Fractions
                 </Button>)}
               </div>
-          </div>  
+            </div>
+            <div className={styles.main_section_img_block}   style={{
+                backgroundImage: `url(${imgURL})`
+              }}>
+                <div className={styles.main_section_button}>
+                  {isMobile && (<Button
+                    size="medium"
+                    onClick={() => {}}>
+                    Fractions
+                  </Button>)}
+                </div>
+            </div>  
+          </div>
         </div>
     </div>
   )

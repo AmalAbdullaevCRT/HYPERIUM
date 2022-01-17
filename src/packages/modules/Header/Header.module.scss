@@ -145,9 +145,9 @@
         }
       }
 
-      @include scale((
-        margin-right: 50px,
-      ));
+      &:not(:last-child) {
+        margin-right: 50px;
+      }
 
       svg {
         margin-right: 14px;

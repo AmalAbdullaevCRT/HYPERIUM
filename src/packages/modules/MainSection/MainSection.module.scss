@@ -10,20 +10,22 @@
   background-size: cover;
 
   &_wrapper {
+    @include content;
+  }
+
+  &_content {
+    padding-left: 122px;
     display: flex;
     width: 100%;
-
-    @include content;
     margin-top: 200px;
-    margin-bottom: 100px;
+    height: 800px;
 
     @include phone() {
-      margin-top: 100px;
-      margin-bottom: 0;
-    }
-
-    @include phone() {
+      padding-right: 0;
+      padding-left: 0;
       flex-direction: column;
+      margin-top: 100px;
+      height: 100%;
     }
   }
 
@@ -61,7 +63,7 @@
       margin-top: 10px;
 
       & > button {
-        margin-top: 45px;
+        margin-top: 25px;
       }
     }
   }
