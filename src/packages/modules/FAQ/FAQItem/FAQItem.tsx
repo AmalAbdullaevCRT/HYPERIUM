@@ -16,10 +16,10 @@ const FAQItem: VFC<FAQItemProps> = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className={styles.item}>
+    <div className={styles.item} onClick={() => setIsOpen(!isOpen)}>
       <div className={styles.item_title} >
         {title}
-      <div className={clsx(styles.svg, isOpen && styles.active)} onClick={() => setIsOpen(!isOpen)}>{arrow}</div>
+      <div className={clsx(styles.svg, isOpen && styles.active)}>{arrow}</div>
       </div>
       {isOpen && <div className={clsx(styles.item_content, isOpen ? styles.inAnimation : styles.outAnimation )} >
         {content}

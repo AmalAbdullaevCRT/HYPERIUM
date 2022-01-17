@@ -63,7 +63,7 @@ const CodeHyperium: VFC = () => {
                   Descendants back. Now they want to resurrect the souls of 
                   their ancient Samurai ancestors into the new dimension of HYPERIUM.
                 </div>
-                {isMobile && <a className={styles.more_button} onClick={() => setShowMore(!showMore)}>More</a>}
+                {isMobile && <a className={styles.more_button} onClick={() => setShowMore(!showMore)}>{showMore ? 'More' : 'Hide' }</a>}
               </div>
           </div>
           <div className={styles.content_borderedBlock}>

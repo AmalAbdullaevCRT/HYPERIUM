@@ -4,6 +4,7 @@
   width: 600px;
   margin-bottom: 15px;
   background: linear-gradient(to right, rgba(239, 32, 138, 0.12) ,  #161721);
+  cursor: pointer;
 
   @include phone() {
     width: 266px;

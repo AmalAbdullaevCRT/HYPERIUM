@@ -47,7 +47,7 @@ const UploadNow: VFC = () => {
             With each decision made, the canon unfolds, presenting richer questions to debate and explore. All inside CODE HYPERIUM.
           </div>
         </div>
-        {isMobile && <a className={styles.more_button} onClick={() => setShowMore(!showMore)}>More</a>}
+        {isMobile && <a className={styles.more_button} onClick={() => setShowMore(!showMore)}>{showMore ? 'More' : 'Hide' }</a>}
         <div className={styles.carousel}>
           <Swiper
             navigation={{
