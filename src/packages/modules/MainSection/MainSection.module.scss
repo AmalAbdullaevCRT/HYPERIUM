@@ -30,7 +30,7 @@
   }
 
   &_block {
-    width: 550px;
+    max-width: 600px;
     @include phone() {
       width: auto;
     }
