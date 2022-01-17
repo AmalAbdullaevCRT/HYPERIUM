@@ -5,7 +5,7 @@ import styles from './styles.module.scss'
 const MainSectionBlockV2: VFC = () => {
 
   return (
-    <div>
+    <div className={styles.main_section}>
       <div className={styles.main_section_title}>
         <div><span className={styles.pink_text}>CODE HYPERIUM</span></div> 
         <div>is a co-created</div>
