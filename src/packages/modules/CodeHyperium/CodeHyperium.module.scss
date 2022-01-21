@@ -112,6 +112,7 @@
     &_main {
       margin-top: 56px;
       display: flex;
+      justify-content: center;
 
       @include phone() {
         flex-direction: column;
