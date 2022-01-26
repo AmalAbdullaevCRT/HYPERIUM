@@ -27,7 +27,7 @@ const MainSection: VFC<MainSectionProps> = ({ children, imgURL, mainSectionBlock
                 {!isMobile && (<Button
                   size="large"
                   onClick={() => {}}>
-                  Fractions
+                  Mint
                 </Button>)}
               </div>
             </div>
@@ -38,7 +38,7 @@ const MainSection: VFC<MainSectionProps> = ({ children, imgURL, mainSectionBlock
                   {isMobile && (<Button
                     size="medium"
                     onClick={() => {}}>
-                    Fractions
+                    Mint
                   </Button>)}
                 </div>
             </div>  
