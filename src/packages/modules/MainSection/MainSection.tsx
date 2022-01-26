@@ -2,6 +2,7 @@ import { ReactNode, VFC } from 'react'
 import { useMediaQuery } from 'react-responsive'
 
 import Button from '@components/Button'
+import Counter from '@components/Counter'
 
 import styles from './MainSection.module.scss'
 
@@ -23,23 +24,33 @@ const MainSection: VFC<MainSectionProps> = ({ children, imgURL, mainSectionBlock
           <div className={styles.main_section_content}>
             <div className={styles.main_section_block}>
               {mainSectionBlock}
-              <div className={styles.main_section_button}>
-                {!isMobile && (<Button
-                  size="large"
-                  onClick={() => {}}>
-                  Mint
-                </Button>)}
+              <div className={styles.main_section_buttons}>
+                <div className={styles.main_section_button}>
+                  {!isMobile && <Counter /> }
+                </div>
+                <div className={styles.main_section_button}>
+                  {!isMobile && (<Button
+                    size="large"
+                    onClick={() => {}}>
+                    Mint
+                  </Button>)}
+                </div>
               </div>
             </div>
             <div className={styles.main_section_img_block}   style={{
                 backgroundImage: `url(${imgURL})`
               }}>
-                <div className={styles.main_section_button}>
-                  {isMobile && (<Button
-                    size="medium"
-                    onClick={() => {}}>
-                    Mint
-                  </Button>)}
+                <div className={styles.main_section_buttons}>
+                  <div className={styles.main_section_button}>
+                    {isMobile && <Counter /> }
+                  </div>
+                  <div className={styles.main_section_button}>
+                    {isMobile && (<Button
+                      size="medium"
+                      onClick={() => {}}>
+                      Mint
+                    </Button>)}
+                  </div>
                 </div>
             </div>  
           </div>

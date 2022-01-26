@@ -1,0 +1,37 @@
+.counter {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid #202334;
+  box-sizing: border-box;
+  backdrop-filter: blur(15px);
+  width: 177px;
+  height: 70px;
+  display: flex;
+
+  @include phone() {
+    width: 266px;
+    height: 63px;
+  }
+
+  &_count {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 31px;
+    letter-spacing: 0.065em;
+
+    color: $pink;
+    flex-basis: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    flex-basis: 50%;
+    padding: 0;
+  }
+}

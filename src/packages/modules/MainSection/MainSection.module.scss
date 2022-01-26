@@ -56,6 +56,22 @@
 
   &_button {
     margin-top: 36px;
+    &:first-child {
+      margin-right: 28px;
+
+      @include phone() {
+        margin-right: 0;
+      }
+    }
+
+    &:last-child {
+      @include phone() {
+        margin-top: 0;
+        & > button {
+          margin-top: 0;
+        }
+      }
+    }
 
     @include phone() {
       display: flex;
@@ -65,6 +81,14 @@
       & > button {
         margin-top: 25px;
       }
+    }
+  }
+
+  &_buttons {
+    display: flex;
+
+    @include phone() {
+      flex-direction: column;
     }
   }
 }
